@@ -168,12 +168,14 @@ optical/light-and-color/red-laser-sensor-module)
 
 * Now ordered these walkie talkies to open up, € 29.99 [via LIDL](https://www.lidl.nl/p/silvercrest-walkie-talkies-voor-kinderen/p100359077002?mktc=shopping)
 
+ <img src="./images/walkies.png" alt="walkie talkie lidl" width="400"> 
+
 
 * Earlier I got these €10 walkie talkies from flying tiger. **These don't actually have a microphone!** They just pick up noise and interference (so can work as noise making devices). Listen [here](./images/walkienoise.mp3). Available at [flying tiger €10](https://flyingtiger.com/nl/products/walkie-talkie-set-3034395?variant=41188458397894&srsltid=Ad5pg_E7P2uBBKjFlA-3Iy8jgljKbblaxprOBdHRD30Sq0cDsXl1De_tzrs&currency=eur)
 
- <img src="./images/walkie1.jpg" alt="walkie talkie contents" width="600"> 
+ <img src="./images/walkie1.jpg" alt="walkie talkie contents" width="500"> 
 
- <img src="./images/walkie2.jpg" alt="walkie talkie contents" width="600"> 
+ <img src="./images/walkie2.jpg" alt="walkie talkie contents" width="500"> 
 
 
 ### Power supplies

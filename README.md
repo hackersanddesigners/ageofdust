@@ -118,7 +118,7 @@ You can make your digital sensor or use already made digital sensors. The option
 
 * any metal/conductive parts (aluminum foil, copper tape, metals, wet materials). See also this page with examples: [DIY switches page](./switches/diyswitches.md)
 
- <img src="./images/switches_conductivematerials.png" alt="different conductive materials" width="300"> 
+ <img src="./images/switches_conductivematerials.jpg" alt="different conductive materials" width="300"> 
 
 * vibration sensor module - € 2 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/acceleration-rotation/vibration-sensor-module-3-5v-sw-18010p)
 
@@ -130,7 +130,7 @@ You can make your digital sensor or use already made digital sensors. The option
 
 * water sensor € 2,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/liquid/rain-sensor)
 
- <img src="./images/sensor_rain.png" alt="rain sensor module" width="350"> 
+ <img src="./images/sensor_rain.jpg" alt="rain sensor module" width="350"> 
 
 * magnet sensor € 1,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/magnetic-field/hall-effect-switch-module)
 
@@ -164,7 +164,7 @@ optical/light-and-color/red-laser-sensor-module)
 
 * Now ordered these walkie talkies to open up, € 29.99 [via LIDL](https://www.lidl.nl/p/silvercrest-walkie-talkies-voor-kinderen/p100359077002?mktc=shopping)
 
- <img src="./images/walkies.png" alt="walkie talkie lidl" width="400"> 
+ <img src="./images/walkies.jpg" alt="walkie talkie lidl" width="400"> 
 
 
 * Earlier I got these €10 walkie talkies from flying tiger. **These don't actually have a microphone!** They just pick up noise and interference (so can work as noise making devices). Listen [here](./images/walkienoise.mp3). Available at [flying tiger €10](https://flyingtiger.com/nl/products/walkie-talkie-set-3034395?variant=41188458397894&srsltid=Ad5pg_E7P2uBBKjFlA-3Iy8jgljKbblaxprOBdHRD30Sq0cDsXl1De_tzrs&currency=eur)

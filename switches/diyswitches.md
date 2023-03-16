@@ -69,7 +69,16 @@ The little modules are switches that are not manually controlled (e.g. by pressi
 
 *Push switch making use of a paper fold). Credit: makerspacescom*
 
+<img src="../images/DIYswitches25.jpg" alt="DIY switch" width="500"> 
+
+*Handshake switch made of plastic glove and aluminum foil). Credit: Hackers & Designers*
+
+<img src="../images/DIYswitches24.jpg" alt="DIY switch" width="500"> 
+
+*Fishing switch: getting the dangling bowl into one of the vases on the floor closes the circuit. Credit: Hackers & Designers and students MA Arts Education AHK*
+
+
 <img src="../images/DIYswitches17.jpg" alt="DIY switch" width="500"> 
-<img src="../images/DIYswitches18.png" alt="DIY switch" width="500"> 
+<img src="../images/DIYswitches18.jpg" alt="DIY switch" width="500"> 
 
 *Combined switch (metal of tap shoes 1 > wet rug > metal of tap shoes 2 hold the ground connection, and body of person 1 > body of person 2 are the switch: the close the circuit when their skin touches) Credit: Loes Bogers*

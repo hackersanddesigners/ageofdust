@@ -116,7 +116,7 @@ Downside:
 
 You can make your digital sensor or use already made digital sensors. The options below are plug and play without coding or breadboard (just jumpers/alligator clips). The pre-assembled boards allow you to calibrate an analog sensor as switch (e.g. light sensor), by turning the screw on the board. You can also use any on/off switches you salvage from old devices and use them as a trigger
 
-* any metal/conductive parts (aluminum foil, copper tape, metals, wet materials). See also this page with examples: [./diyswitches.md](./diyswitches.md)
+* any metal/conductive parts (aluminum foil, copper tape, metals, wet materials). See also this page with examples: [DIY switches page](./switches/diyswitches.md)
 
  <img src="./images/switches_conductivematerials.png" alt="different conductive materials" width="300"> 
 

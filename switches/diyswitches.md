@@ -77,6 +77,13 @@ The little modules are switches that are not manually controlled (e.g. by pressi
 
 *Fishing switch: getting the dangling bowl into one of the vases on the floor closes the circuit. Credit: Hackers & Designers and students MA Arts Education AHK*
 
+<img src="../images/DIYswitches27.jpg" alt="DIY switch" width="400"> 
+
+*Switch made of patches that are connected when a conductive cylinder rolls across them. Credit: Hackers & Designers/Master students arts education AHK*
+
+<img src="../images/DIYswitches26.jpg" alt="DIY switch" width="650"> 
+
+*Several handmade switches that require large gestures. Credit: Hackers & Designers*
 
 <img src="../images/DIYswitches17.jpg" alt="DIY switch" width="500"> 
 <img src="../images/DIYswitches18.jpg" alt="DIY switch" width="500"> 

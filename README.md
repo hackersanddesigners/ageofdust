@@ -135,6 +135,8 @@ You can make your digital sensor or use already made digital sensors. The option
 
 * water sensor € 2,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/liquid/rain-sensor)
 
+>> not great as trigger
+
  <img src="./images/sensor_rain.jpg" alt="rain sensor module" width="350"> 
 
 * magnet sensor € 1,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/magnetic-field/hall-effect-switch-module)
@@ -142,6 +144,8 @@ You can make your digital sensor or use already made digital sensors. The option
  <img src="./images/sensor_magnetic_hall.png" alt="hall effect sensor module" width="200"> 
 
 * motion sensor € 3,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/motion/ir-pyroelectric-infrared-pir-motion-sensing-detector-module)
+
+>> can be hard to control, bit flimsy
 
  <img src="./images/sensor_movement_pir.png" alt="PIR sensor" width="200"> 
 

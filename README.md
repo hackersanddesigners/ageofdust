@@ -121,7 +121,7 @@ You can make your digital sensor or use already made digital sensors. The option
 
  <img src="./images/switches_conductivematerials.jpg" alt="different conductive materials" width="300"> 
 
-* piezo transducer €0.50 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/speakers/buzzers/piezo-electronic-buzzer-with-soldered-wires-35mm) placing it between teeth or on jaw makes sound audible
+* piezo transducer €0.50 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/speakers/buzzers/piezo-electronic-buzzer-with-soldered-wires-35mm) press, knock or bend to create trigger signal.
 
  <img src="./images/piezo.png" alt="piezo transducer" width="250"> 
 

@@ -79,16 +79,15 @@ ISD1820 Voice Recording and Playback Module is made of  different elements, not 
 **Can be customized:**
 
 * the speaker
-* the buttons
-
-**Modifications that can be done with jumper wires:**
-
-* drive speaker directly
-* play record on loop
+* the buttons (vcc <-> play)
+* samplerate with 500k pot on p2 jumper (distorts sounds)
+* slide switch to loop
+* slide switch to drive speaker directly
 
 Downside: 
 
 * Only one file can be stored and played on this device.
+* Built-in amp very low. You can attach a jack to the speaker pins and connect to battery powered speaker though.
 
 
 ### Audio: Speakers
@@ -108,6 +107,8 @@ Downside:
  <img src="./images/speaker_boneconduction.png" alt="bone conduction speaker" width="100"> 
  
 * stereo amplifier 2x3W 5V w volume control € 3 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/amplifiers/2x3w-stereo-audio-amplifier-mini-5v-pam8403-volume-control-v2)
+
+>> doesnt works with ISD1820.
 
  <img src="./images/amp.png" alt="mini amp with volume control knob" width="150"> 
 

@@ -4,22 +4,28 @@ Research for age of dust tools as part of worldbuilding.
 
 ## Wishes
 
-* record and playback audio
+* record and playback audio (both single track that overwrites, and multiple that are stored and can be played later)
 * freedom in designing the interaction with the tool and how it looks
+	* no-coding options will help with this
 * possibility to recycle hardware parts
-* walkie-talkie-like system could be fun
+* walkie-talkie-like system could be fun 
 
-## Questions for Emma
 
-* Controlling DF player w resistors needs to be quite precise. Smart to figure out how to control with an ESP32 wroom devkit? (we have a bunch of those and they're cheap, looks like is possible). 
-	* can be controlled via UART (e.g. Arduino UNO, but have also seen [examples with ESP32](https://youtu.be/kq2RLz65_w0), which we have few of at H&D? Looked into ATtiny85 digispark a bit, [could work](https://github.com/wagiminator/ATtiny85-TinyDFPlayer) with some tuning of the internal oscillator, but not super easy I guess.
+## Update for Emma
+
+* Juliette and I love all these options and would like to offer them all :) 
+* I started collecting some DIY switch examples here [./switches/diyswitches.md](./switches/diyswitches.md)
+* Loud sound is not a must, Juliette is interested in a "different ways of listening" approach <3
+* I've tested the ISD1820 with all options, and have all wiring diagrams done just need to update with the power source (which is still WIP) See here [./files > ISD1820_wiring.pptx](./files/ISD1820_wiring.pptx)
+* Controlling DF player w resistors needs to be quite precise to get all buttons to play different track. I need to look into this a bit more to see which work well with (a combination of) standard resistors. 
+	* Could be smart to figure out how to control with an ESP32 wroom devkit? (we have a bunch of those and they're cheap, looks like is possible). Can be controlled via UART (e.g. Arduino UNO, but have also seen [examples with ESP32](https://youtu.be/kq2RLz65_w0), which we have few of at H&D? Looked into ATtiny85 digispark a bit, [could work](https://github.com/wagiminator/ATtiny85-TinyDFPlayer) with some tuning of the internal oscillator, but not super easy I guess.
+* I added a solar power option at the bottom that we've used before, we have some of these in the studio, so might be worth taking a look? 
+* I found a nice walkie talkie option which I opened up, looks promising (see below)
+* I listed all components in a spreadsheet with some info on operating voltages, supplier link and prices etc so we can keep track easily, see [files > components.xlsx](./files/components.xlsx). I also added some other options here that might be fun (in blue and red).
 
 ## Questions for Juliette
 
-* do you think we'd need to be able to hook up audo devices to pro sound system? Or a little simpler: a small battery powered speaker. Or on the lower end: 4-8 ohm lil speakers.
-* how many participants are we thinking?
-* are there any tools you imagine you'd want more than one of? 
-* options are now no-coding (easy for all), some options that require coding also ok?
+* how many participants are we thinking? > 10-20 working in pairs
 * it could be cool to go [soft](https://www.kobakant.at/DIY/) (wearable props), but this is an entirely different making process. Could also be wearable but hard :)
 * What kind of materials would you prefer for casings? Natural materials? Plastics? Recycled? Integrated into costume?
 
@@ -34,11 +40,9 @@ Max € 750 for all materials, components, tools
 * Document some examples for participants on how things work/connect
 * The actual exploration - building tools for the script - will happen in the workshop
 
-## No-coding tool options
+## Audio in: recording & playback
 
-### Input: Audio recording & playback
-
-#### MP3 player €7.50
+### MP3 player €7.50
 
 You can play the audio tracks saved in an SD card. You can trigger the different tracks by attaching switches/buttons to the different pins. You can customize the button and the speakers. See below.
 
@@ -61,7 +65,7 @@ Downside:
  <img src="./images/dfplayer_schem.png" alt="DFPlayer module" width="500"> 
 
 
-#### ISD1820 Voice recording module
+### ISD1820 Voice recording module
 
 ISD1820 - 10 second audio recording and playback module € 3.50 
 
@@ -72,10 +76,11 @@ Recording time can be adjusted to 20 secs by replacing jumper with a 200K resist
 
 [Datasheet](./files/VoiceRecord_moduleISD1820.pdf)
 
+[**All wiring diagrams** in files > ISD1820_wiring.pptx](./files/ISD1820_wiring.pptx)
+
+
  <img src="./images/ISD1820_all.jpg" alt="DFPlayer module" width="1600"> 
-
-ISD1820 Voice Recording and Playback Module is made of  different elements, not all of them can be customized:
-
+ 
 **Can NOT be customized:**
 
 * core pcb
@@ -86,7 +91,7 @@ ISD1820 Voice Recording and Playback Module is made of  different elements, not 
 
 **Can be customized: >> see image**
 
-* the speaker (works w. piezo, bone conductor
+* the speaker (works w. piezo, bone conductor, jack to batt powered speaker)
 * the buttons (vcc <-> play)
 * samplerate with 500k pot on p2 jumper (distorts sounds)
 * slide switch to loop
@@ -98,80 +103,122 @@ Downside:
 * Built-in amp very low. You can attach a jack to the speaker pins and connect to battery powered speaker though. 
 
 
-### Audio: Speakers
+## Audio out: Speakers
 
-* normal speakers (anything that takes a 3.5mm jack)
+### battery powered speakers 
+
+Anything that takes a jack
 
  <img src="./images/speakers4.5V.jpeg" alt="mini speakers" width="450"> 
 
-* soft speakers, a little bit elaborated, you need different materials [see Kobakant](https://www.kobakant.at/DIY/?p=5935)
+### piezo transducer 
 
-* piezo transducer €0.50 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/speakers/buzzers/piezo-electronic-buzzer-with-soldered-wires-35mm) placing it between teeth or on jaw makes sound audible
+€0.50 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/speakers/buzzers/piezo-electronic-buzzer-with-soldered-wires-35mm) placing it between teeth or on jaw makes sound audible
 
  <img src="./images/piezo.png" alt="piezo transducer" width="250"> 
 
-* bone conductor transducer, turns any surface into a speaker € 5 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/speakers/speakers/bone-conductor-transducer-8%CF%89-1w), [via Adafruit](https://www.instructables.com/Adafruit-Bone-Conduction-Speaker/)
+### bone conductor transducer 
 
- <img src="./images/speaker_boneconduction.png" alt="bone conduction speaker" width="100"> 
+turns any surface into a speaker € 5 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/speakers/speakers/bone-conductor-transducer-8%CF%89-1w), [via Adafruit](https://www.instructables.com/Adafruit-Bone-Conduction-Speaker/)
+
+ <img src="./images/speaker_boneconduction.png" alt="bone conduction speaker" width="150">
  
-* stereo amplifier 2x3W 5V w volume control € 3 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/amplifiers/2x3w-stereo-audio-amplifier-mini-5v-pam8403-volume-control-v2)
+### DIY speakers
+ 
+a little bit elaborated, you need different materials [see Kobakant for inspiration](https://www.kobakant.at/DIY/?p=5935). Here a [tutorial for a soft speaker](https://www.instructables.com/Woven-Paper-Cup-Speaker/) made with yarn in a paper cup, and [here how to make a coil from lacquered wire](https://www.instructables.com/How-to-make-a-speaker-4/).
+
+* for the coil: lacquered copper wire, copper tape, conductive yarn and regular yarn. Make a coil of 7-8 windings that measures 8 ohm resistance
+* for the membrane: paper, fabrics, paper/plastic cups
+* insulation tape
+* strong neodymium magnets 
+
+ <img src="./images/DIYspeaker.jpg" alt="DIY soft speakers" width="450"> 
+ 
+ *Credit: Kobakant*
+
+ 
+### Stereo amplifier (bonus?)
+
+2x3W 5V w volume control € 3 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/amplifiers/2x3w-stereo-audio-amplifier-mini-5v-pam8403-volume-control-v2)
 
 >> not strong enough to amplify output of ISD1820.
 
  <img src="./images/amp.png" alt="mini amp with volume control knob" width="150"> 
 
 
-### Triggers: switches and sensors
+## Triggers: switches and sensors
 
 You can make your digital sensor or use already made digital sensors. The options below are plug and play without coding or breadboard (just jumpers/alligator clips). The pre-assembled boards allow you to calibrate an analog sensor as switch (e.g. light sensor), by turning the screw on the board. You can also use any on/off switches you salvage from old devices and use them as a trigger
 
-* any metal/conductive parts (aluminum foil, copper tape, metals, wet materials). See also this page with examples: [DIY switches page](./switches/diyswitches.md)
+### any metal/conductive parts 
+
+Aluminum foil, copper tape, metals, wet materials. See also this page with examples: [DIY switches page](./switches/diyswitches.md)
 
  <img src="./images/switches_conductivematerials.jpg" alt="different conductive materials" width="300"> 
 
-* piezo transducer €0.50 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/speakers/buzzers/piezo-electronic-buzzer-with-soldered-wires-35mm) press, knock or bend to create trigger signal.
+### piezo transducer 
+
+€0.50 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/speakers/buzzers/piezo-electronic-buzzer-with-soldered-wires-35mm) press, knock or bend to create trigger signal.
 
  <img src="./images/piezo.png" alt="piezo transducer" width="250"> 
 
-* vibration sensor module - € 2 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/acceleration-rotation/vibration-sensor-module-3-5v-sw-18010p)
+### vibration sensor module 
+
+€ 2 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/acceleration-rotation/vibration-sensor-module-3-5v-sw-18010p)
 
  <img src="./images/sensor_vibration.png" alt="vibrartion sensor module" width="250"> 
 
-* tilt sensor € 2 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/acceleration-rotation/ball-switch-tilt-sensor-module-3-5v-sw-520d)
+### tilt sensor 
+
+€ 2 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/acceleration-rotation/ball-switch-tilt-sensor-module-3-5v-sw-520d)
 
  <img src="./images/sensor_tiltswitch.png" alt="tilt switch" width="250"> 
 
-* magnet sensor € 1,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/magnetic-field/hall-effect-switch-module)
+### magnet sensor 
+
+€ 1,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/magnetic-field/hall-effect-switch-module)
 
  <img src="./images/sensor_magnetic_hall.png" alt="hall effect sensor module" width="200"> 
 
-* motion sensor € 3,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/motion/ir-pyroelectric-infrared-pir-motion-sensing-detector-module)
+### motion sensor 
+
+€ 3,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/motion/ir-pyroelectric-infrared-pir-motion-sensing-detector-module)
 
 >> can be hard to control, bit flimsy
 
  <img src="./images/sensor_movement_pir.png" alt="PIR sensor" width="200"> 
 
-* light sensor € 2,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/optical/light-and-color/light-sensor-module)
+### light sensor 
+
+€ 2,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/optical/light-and-color/light-sensor-module)
 
  <img src="./images/sensor_light_LDR.png" alt="light sensor with LDR" width="200"> 
 
-* red laser sensor € 2 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/
+### red laser sensor 
+
+€ 2 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/
 optical/light-and-color/red-laser-sensor-module)
 
 <img src="./images/sensor_redlaser.png" alt="red laser sensor module" width="200"> 
 
-### Output: Other than sound
+## Output: Other than sound
 
-* Piezo mist discs € 0,80 standalone, [via tinytronics](https://www.tinytronics.nl/shop/en/mechanics-and-actuators/others/piezo-mist-disc-110khz) or module € 4 [via tinytronics](https://www.tinytronics.nl/shop/en/mechanics-and-actuators/others/ultrasonic-mist-module)
+WIP
+
+### Piezo mist discs 
+
+€ 0,80 standalone, [via tinytronics](https://www.tinytronics.nl/shop/en/mechanics-and-actuators/others/piezo-mist-disc-110khz) or module € 4 [via tinytronics](https://www.tinytronics.nl/shop/en/mechanics-and-actuators/others/ultrasonic-mist-module)
 
  <img src="./images/output_ultrasonic_mist_module.png" alt="ultrasonic mist module" width="300"> 
 
-* red laser € 2 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/optical/light-and-color/red-laser-sensor-module) >> omg check [this DIY laser projection generated by sound and mirrors](https://www.kobakant.at/DIY/?p=9106)
+### red laser 
+
+€ 2 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/optical/light-and-color/red-laser-sensor-module) >> omg check [this DIY laser projection generated by sound and mirrors](https://www.kobakant.at/DIY/?p=9106)
 
  <img src="./images/output_laser.png" alt="red laser module" width="200"> 
  
 
-### Messaging: walkie talkies
+## Messaging: walkie talkies
 
 Now ordered these walkie talkies to open up, € 29.99 [via LIDL](https://www.lidl.nl/p/silvercrest-walkie-talkies-voor-kinderen/p100359077002?mktc=shopping)
 
@@ -202,13 +249,24 @@ Opens up by loosening the screws, just need to cut into silicone that glues down
  <img src="./images/walkie2.jpg" alt="walkie talkie contents" width="500"> 
 
 
-### Power supplies
+## Power supplies
 
 **WIP** 
 
-Made a little overview of the list you sent @Emma. In red and blue some things I thought of that might be handy. An editable spreadsheet is in [here](./files/components.xlsx)
+### Solar powered
+
+>> We have a bunch of these kits from another solar project. Could be worth checking out for this workshop? 
+
+* LilyGO TTGO T-Bat w 18650 Li-on battery holder CN3065 € 5,50 [via Tinytronics](https://www.tinytronics.nl/shop/nl/power/bms-en-laders/li-ion-en-li-po/met-protectiecircuit/lilygo-ttgo-t-bat-met-18650-batterijhouder-cn3065)
+	* Vin: 5V (via micro USB connector) OR 4.5-6V via solar cell connector OR solar cell via JST connector
+	* Vout: 5V via USB A connector or via JST-PH connector
+* Li-on 18650 battery 3400mA - 10A - € 6,00 [Via tinytronics](https://www.tinytronics.nl/shop/nl/power/batterijen/18650/lg-18650-li-ion-batterij-3400mah-10a-inr18650-mj1)
+* Seeed Studio Solar panels 5.5V 100mA - 55x70mm with JST-PH connector €4,25 [via Tinytronics](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/seeed-studio-zonnepaneel-5.5v-100ma-55x70mm-met-jst-ph-connector). Also available: 5.5V 170mA but has bulkier size [via tinytronics, €6,50](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/seeed-studio-zonnepaneel-5.5v-170ma-80x100mm-met-jst-ph-connector)
+
+ <img src="./images/lilygoboard.jpg" alt="LilyGO charging board" width="800"> 
 
 
-### Casing and integration
+
+## Casing and integration
 
 WIP

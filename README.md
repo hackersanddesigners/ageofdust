@@ -9,6 +9,11 @@ Research for age of dust tools as part of worldbuilding.
 * possibility to recycle hardware parts
 * walkie-talkie-like system could be fun
 
+## Questions for Emma
+
+* Controlling DF player w resistors needs to be quite precise. Smart to figure out how to control with an ESP32 wroom devkit? (we have a bunch of those and they're cheap, looks like is possible). 
+	* can be controlled via UART (e.g. Arduino UNO, but have also seen [examples with ESP32](https://youtu.be/kq2RLz65_w0), which we have few of at H&D? Looked into ATtiny85 digispark a bit, [could work](https://github.com/wagiminator/ATtiny85-TinyDFPlayer) with some tuning of the internal oscillator, but not super easy I guess.
+
 ## Questions for Juliette
 
 * do you think we'd need to be able to hook up audo devices to pro sound system? Or a little simpler: a small battery powered speaker. Or on the lower end: 4-8 ohm lil speakers.
@@ -58,13 +63,16 @@ Downside:
 
 #### ISD1820 Voice recording module
 
-ISD1820 - 20 second audio recording and playback module € 3.50 
+ISD1820 - 10 second audio recording and playback module € 3.50 
+
+Recording time can be adjusted to 20 secs by replacing jumper with a 200K resistor 
+[Sound clip of distortion here](./files/ISD1820_pot_distort.mp3)
 
 [Via tinytronics](https://www.tinytronics.nl/shop/en/audio/accessories/others/voice-recording-module-with-speaker-isd1820)
 
 [Datasheet](./files/VoiceRecord_moduleISD1820.pdf)
 
- <img src="./images/ISD1820module.jpg" alt="DFPlayer module" width="300"> 
+ <img src="./images/ISD1820_all.jpg" alt="DFPlayer module" width="1600"> 
 
 ISD1820 Voice Recording and Playback Module is made of  different elements, not all of them can be customized:
 
@@ -72,13 +80,13 @@ ISD1820 Voice Recording and Playback Module is made of  different elements, not 
 
 * core pcb
 
-**Can maybe be customized:**
+**Can maybe be customized: >> didnt try**
 
 * embedded mic
 
-**Can be customized:**
+**Can be customized: >> see image**
 
-* the speaker
+* the speaker (works w. piezo, bone conductor
 * the buttons (vcc <-> play)
 * samplerate with 500k pot on p2 jumper (distorts sounds)
 * slide switch to loop
@@ -87,7 +95,7 @@ ISD1820 Voice Recording and Playback Module is made of  different elements, not 
 Downside: 
 
 * Only one file can be stored and played on this device.
-* Built-in amp very low. You can attach a jack to the speaker pins and connect to battery powered speaker though.
+* Built-in amp very low. You can attach a jack to the speaker pins and connect to battery powered speaker though. 
 
 
 ### Audio: Speakers
@@ -108,7 +116,7 @@ Downside:
  
 * stereo amplifier 2x3W 5V w volume control € 3 [via tinytronics](https://www.tinytronics.nl/shop/en/audio/amplifiers/2x3w-stereo-audio-amplifier-mini-5v-pam8403-volume-control-v2)
 
->> doesnt works with ISD1820.
+>> not strong enough to amplify output of ISD1820.
 
  <img src="./images/amp.png" alt="mini amp with volume control knob" width="150"> 
 
@@ -132,12 +140,6 @@ You can make your digital sensor or use already made digital sensors. The option
 * tilt sensor € 2 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/acceleration-rotation/ball-switch-tilt-sensor-module-3-5v-sw-520d)
 
  <img src="./images/sensor_tiltswitch.png" alt="tilt switch" width="250"> 
-
-* water sensor € 2,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/liquid/rain-sensor)
-
->> not great as trigger
-
- <img src="./images/sensor_rain.jpg" alt="rain sensor module" width="350"> 
 
 * magnet sensor € 1,50 [via tinytronics](https://www.tinytronics.nl/shop/en/sensors/magnetic-field/hall-effect-switch-module)
 
@@ -171,12 +173,29 @@ optical/light-and-color/red-laser-sensor-module)
 
 ### Messaging: walkie talkies
 
-* Now ordered these walkie talkies to open up, € 29.99 [via LIDL](https://www.lidl.nl/p/silvercrest-walkie-talkies-voor-kinderen/p100359077002?mktc=shopping)
+Now ordered these walkie talkies to open up, € 29.99 [via LIDL](https://www.lidl.nl/p/silvercrest-walkie-talkies-voor-kinderen/p100359077002?mktc=shopping)
+
+These have 8 channels to choose from, volume control, and - yess - a mic. Sound quality is not bad! Also has an LED number panel that indicates the selected channel. The channels probably mean we can also have more than 2 walkie talkies transmitting on that frequency. 
+
+Opens up by loosening the screws, just need to cut into silicone that glues down the speaker to remove it. Circles in the PCB show where the buttons were located. Other switches can be attached with some precision soldering and a dot of hot glue.
+
+**Can be customized?**
+
+* switches > YES
+* microphone > ?
+* LED number > ? 
+* speaker > ?
+* 4.5V power supply > ? (check at 5V?)
 
  <img src="./images/walkies.jpg" alt="walkie talkie lidl" width="400"> 
+ 
+  <img src="./images/" alt="walkie talkie lidl inside" width="400"> 
 
+  <img src="./images/" alt="walkie talkie lidl inside" width="400"> 
 
-* Earlier I got these €10 walkie talkies from flying tiger. **These don't actually have a microphone!** They just pick up noise and interference (so can work as noise making devices). Listen [here](./images/walkienoise.mp3). Available at [flying tiger €10](https://flyingtiger.com/nl/products/walkie-talkie-set-3034395?variant=41188458397894&srsltid=Ad5pg_E7P2uBBKjFlA-3Iy8jgljKbblaxprOBdHRD30Sq0cDsXl1De_tzrs&currency=eur)
+ 
+
+* Earlier I got these €10 walkie talkies from flying tiger. **These don't actually have a microphone!** They just pick up noise and interference (so can work as noise making devices). Listen [here](./files/walkienoise.mp3). Available at [flying tiger €10](https://flyingtiger.com/nl/products/walkie-talkie-set-3034395?variant=41188458397894&srsltid=Ad5pg_E7P2uBBKjFlA-3Iy8jgljKbblaxprOBdHRD30Sq0cDsXl1De_tzrs&currency=eur)
 
  <img src="./images/walkie1.jpg" alt="walkie talkie contents" width="500"> 
 
@@ -187,9 +206,7 @@ optical/light-and-color/red-laser-sensor-module)
 
 **WIP** 
 
-Made a little overview of the list you sent @Emma. In red and blue some things I though tof that might be handy. An editable spreadsheet is in [here](./files/components.xlsx)
-
- <img src="./images/voltages.png" alt="operating voltages of suggested components" width="600"> 
+Made a little overview of the list you sent @Emma. In red and blue some things I thought of that might be handy. An editable spreadsheet is in [here](./files/components.xlsx)
 
 
 ### Casing and integration

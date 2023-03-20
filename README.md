@@ -125,12 +125,18 @@ turns any surface into a speaker € 5 [via tinytronics](https://www.tinytronics
  
 ### DIY speakers
  
-a little bit elaborated, you need different materials [see Kobakant for inspiration](https://www.kobakant.at/DIY/?p=5935). Here a [tutorial for a soft speaker](https://www.instructables.com/Woven-Paper-Cup-Speaker/) made with yarn in a paper cup, and [here how to make a coil from lacquered wire](https://www.instructables.com/How-to-make-a-speaker-4/).
+a little bit elaborated, you need different materials [see Kobakant for inspiration](https://www.kobakant.at/DIY/?p=5935). Here a [tutorial for a soft speaker](https://www.instructables.com/Woven-Paper-Cup-Speaker/) made with yarn in a paper cup, and [here how to make a coil from lacquered wire](https://www.instructables.com/How-to-make-a-speaker-4/). A speaker works with electromagnetism. It consists of a coil (an insulated spiral of conductive material), a strong magnet, and a cone or other thin membrane. When there's a current going through the coil and the magnet is close enough, it will start to move slightly at a very fast speed (frequency), the movement is transferred to the membrane or cone attached to it, which amplifies it acoustically so the sound becomes audible.
 
-* for the coil: lacquered copper wire, copper tape, conductive yarn and regular yarn. Make a coil of 7-8 windings that measures 8 ohm resistance
-* for the membrane: paper, fabrics, paper/plastic cups
+ <img src="./images/speaker_anatomy.jpg" alt="DIY soft speakers" width="300"> 
+
+*Note: this may take some trial and error process to get right :)*
+
+* for the coil: lacquered copper wire, copper tape, conductive yarn and regular yarn. Make a coil that measures 4-8 ohm resistance. Tighter windings = louder sound
+* don't short the coil 
+* you need to make a cone or membrane, e.g. from paper, fabrics, paper/plastic cups. Should be stiff-ish but not too stiff (then the small vibrations can't move the cone/membrane).
 * insulation tape
 * strong neodymium magnets 
+* connect the wires of the speaker in the same place you would the other speakers, move one or more magnets closer to the coil to activate the speaker
 
  <img src="./images/DIYspeaker.jpg" alt="DIY soft speakers" width="450"> 
  
@@ -229,18 +235,27 @@ Opens up by loosening the screws, just need to cut into silicone that glues down
 **Can be customized?**
 
 * switches > YES
-* microphone > ?
-* LED number > ? 
-* speaker > ?
+* microphone > YES
+* LED number > only externally I think? E.g. make a lamp cover LOL
+* speaker > YES
 * 4.5V power supply > ? (check at 5V?)
 
  <img src="./images/walkies.jpg" alt="walkie talkie lidl" width="400"> 
- 
-  <img src="./images/" alt="walkie talkie lidl inside" width="400"> 
 
-  <img src="./images/" alt="walkie talkie lidl inside" width="400"> 
+ *walkie talkies unharmed*
 
+  <img src="./images/walkie-inside.jpg" alt="walkie talkie lidl inside" width="750"> 
  
+ *opening up walkie talkie: carefully cut loose silicon that keeps speaker in place*
+
+  <img src="./images/walkie-inside3.jpg" alt="walkie talkie lidl inside" width="750"> 
+
+   *power connections and speaker connector*
+  
+  <img src="./images/walkie-components.jpg" alt="walkie talkie lidl inside" width="600"> 
+
+   *switches and other components on reverse*
+
 
 * Earlier I got these €10 walkie talkies from flying tiger. **These don't actually have a microphone!** They just pick up noise and interference (so can work as noise making devices). Listen [here](./files/walkienoise.mp3). Available at [flying tiger €10](https://flyingtiger.com/nl/products/walkie-talkie-set-3034395?variant=41188458397894&srsltid=Ad5pg_E7P2uBBKjFlA-3Iy8jgljKbblaxprOBdHRD30Sq0cDsXl1De_tzrs&currency=eur)
 

@@ -292,6 +292,13 @@ Opens up by loosening the screws, just need to cut into silicone that glues down
 
  <img src="./images/lilygoboard.jpg" alt="LilyGO charging board" width="800"> 
 
+### Solar panels test
+ <img src="./images/solar_indoor.jpg" alt="walkie talkie contents" width="500">
+  <img src="./images/solar_outdoor.jpg" alt="walkie talkie contents" width="500">
+   <img src="./images/solar_indoor_covered.jpg" alt="walkie talkie contents" width="500">
+    <img src="./images/solar_indoor_flashlight.jpg" alt="walkie talkie contents" width="500">
+  
+with the use of a DC-DC converte, you can power directly the board.
 
 
 ## Casing and integration

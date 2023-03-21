@@ -303,7 +303,9 @@ Opens up by loosening the screws, just need to cut into silicone that glues down
    <img src="./images/solar_indoor_covered.jpg" alt="walkie talkie contents" width="300">
     <img src="./images/solar_indoor_flashlight.jpg" alt="walkie talkie contents" width="300">
   
-with the use of a DC-DC converte, you can power directly the board, without battery.
+with the use of a DC-DC converter, https://www.tinytronics.nl/shop/en/power/voltage-converters/buck-(step-down)-converters/dc-dc-ajustable-step-down-buck-converter-lm2596-3a, you can power directly the board, without battery.
+
+
 
 ### DYNAMO powered
 

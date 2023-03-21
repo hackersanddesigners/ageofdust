@@ -24,7 +24,7 @@ Research for age of dust tools as part of worldbuilding.
 * ISD1820 all options, input and output (all wiring diagrams) See here [./files > ISD1820_wiring.pptx](./files/ISD1820_wiring.pptx)
 
 To do:
-* power source: WIP
+* power source: check the spec of the solar panel kit. 
 
 #### DF MP3 player:
 * Controlling DF player w resistors needs to be quite precise to get all buttons to play different track. I need to look into this a bit more to see which work well with (a combination of) standard resistors. 
@@ -293,13 +293,14 @@ Opens up by loosening the screws, just need to cut into silicone that glues down
  <img src="./images/lilygoboard.jpg" alt="LilyGO charging board" width="800"> 
 
 ### Solar panels test
- <img src="./images/solar_indoor.jpg" alt="walkie talkie contents" width="500">
-  <img src="./images/solar_outdoor.jpg" alt="walkie talkie contents" width="500">
-   <img src="./images/solar_indoor_covered.jpg" alt="walkie talkie contents" width="500">
-    <img src="./images/solar_indoor_flashlight.jpg" alt="walkie talkie contents" width="500">
+ <img src="./images/solar_indoor.jpg" alt="walkie talkie contents" width="300">
+  <img src="./images/solar_outdoor.jpg" alt="walkie talkie contents" width="300">
+   <img src="./images/solar_indoor_covered.jpg" alt="walkie talkie contents" width="300">
+    <img src="./images/solar_indoor_flashlight.jpg" alt="walkie talkie contents" width="300">
   
-with the use of a DC-DC converte, you can power directly the board.
+with the use of a DC-DC converte, you can power directly the board, without battery.
 
+### DYNAMO powered
 
 ## Casing and integration
 

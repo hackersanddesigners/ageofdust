@@ -11,17 +11,29 @@ Research for age of dust tools as part of worldbuilding.
 * walkie-talkie-like system could be fun 
 
 
-## Update for Emma
+## Update for Emma and questions
 
-* Juliette and I love all these options and would like to offer them all :) 
-* I started collecting some DIY switch examples here [./switches/diyswitches.md](./switches/diyswitches.md)
-* Loud sound is not a must, Juliette is interested in a "different ways of listening" approach <3
-* I've tested the ISD1820 with all options, and have all wiring diagrams done just need to update with the power source (which is still WIP) See here [./files > ISD1820_wiring.pptx](./files/ISD1820_wiring.pptx)
-* Controlling DF player w resistors needs to be quite precise to get all buttons to play different track. I need to look into this a bit more to see which work well with (a combination of) standard resistors. 
-	* Could be smart to figure out how to control with an ESP32 wroom devkit? (we have a bunch of those and they're cheap, looks like is possible). Can be controlled via UART (e.g. Arduino UNO, but have also seen [examples with ESP32](https://youtu.be/kq2RLz65_w0), which we have few of at H&D? Looked into ATtiny85 digispark a bit, [could work](https://github.com/wagiminator/ATtiny85-TinyDFPlayer) with some tuning of the internal oscillator, but not super easy I guess.
-* I added a solar power option at the bottom that we've used before, we have some of these in the studio, so might be worth taking a look? 
+* Juliette and I love all these options and would like to offer them all :) <3
+* Loud sound is not a must, Juliette is interested in a "different ways of listening" approach <3 <3
+* DIY switch examples here [./switches/diyswitches.md](./switches/diyswitches.md)
+* I added a solar power option at the bottom that we've used before, we have some of these in the studio, so might be worth taking a look? YES
 * I found a nice walkie talkie option which I opened up, looks promising (see below)
 * I listed all components in a spreadsheet with some info on operating voltages, supplier link and prices etc so we can keep track easily, see [files > components.xlsx](./files/components.xlsx). I also added some other options here that might be fun (in blue and red).
+
+#### ISD1820:
+* ISD1820 all options, input and output (all wiring diagrams) See here [./files > ISD1820_wiring.pptx](./files/ISD1820_wiring.pptx)
+
+To do:
+* power source: WIP
+
+#### DF MP3 player:
+* Controlling DF player w resistors needs to be quite precise to get all buttons to play different track. I need to look into this a bit more to see which work well with (a combination of) standard resistors. 
+	* Could be smart to figure out how to control with an ESP32 wroom devkit? (we have a bunch of those and they're cheap, looks like is possible). Can be controlled via UART (e.g. Arduino UNO, but have also seen [examples with ESP32](https://youtu.be/kq2RLz65_w0), which we have few of at H&D? Looked into ATtiny85 digispark a bit, [could work](https://github.com/wagiminator/ATtiny85-TinyDFPlayer) with some tuning of the internal oscillator, but not super easy I guess.
+
+To do:
+* check mp3 module with ESP32 wroom devkit
+* check mp3 module with attiny85
+
 
 ## Questions for Juliette
 

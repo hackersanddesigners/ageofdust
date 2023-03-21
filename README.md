@@ -24,6 +24,7 @@ Research for age of dust tools as part of worldbuilding.
 * ISD1820 all options, input and output (all wiring diagrams) See here [./files > ISD1820_wiring.pptx](./files/ISD1820_wiring.pptx)
 
 To do:
+* audio amp
 * power source: 
  - check the spec of the solar panel kit.
  - add reference for dynamo charger

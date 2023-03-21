@@ -34,6 +34,7 @@ To do:
 	* Could be smart to figure out how to control with an ESP32 wroom devkit? (we have a bunch of those and they're cheap, looks like is possible). Can be controlled via UART (e.g. Arduino UNO, but have also seen [examples with ESP32](https://youtu.be/kq2RLz65_w0), which we have few of at H&D? Looked into ATtiny85 digispark a bit, [could work](https://github.com/wagiminator/ATtiny85-TinyDFPlayer) with some tuning of the internal oscillator, but not super easy I guess.
 
 To do:
+* right resistors selection for trigger different tracks
 * check mp3 module with ESP32 wroom devkit
 * check mp3 module with attiny85
 

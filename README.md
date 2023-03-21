@@ -24,7 +24,10 @@ Research for age of dust tools as part of worldbuilding.
 * ISD1820 all options, input and output (all wiring diagrams) See here [./files > ISD1820_wiring.pptx](./files/ISD1820_wiring.pptx)
 
 To do:
-* power source: check the spec of the solar panel kit. 
+* power source: 
+ - check the spec of the solar panel kit.
+ - add reference for dynamo charger
+ - evalute wind turbine
 
 #### DF MP3 player:
 * Controlling DF player w resistors needs to be quite precise to get all buttons to play different track. I need to look into this a bit more to see which work well with (a combination of) standard resistors. 

@@ -375,7 +375,8 @@ I didn't try outside on a sunny day yet (it hasn't been sunny). As single cell I
 ### DYNAMO powered
 
 instructable: https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf
-<img src="./images/dynamo_00.png" alt="walkie talkie contents" width="400">
+
+<img src="./images/dynamo_00.png" alt="walkie talkie contents" width="200">
 <img src="./images/dynamo_01.png" alt="walkie talkie contents" width="400">
 <img src="./images/dynamo_02.png" alt="walkie talkie contents" width="400">
 <img src="./images/dynamo_03.png" alt="walkie talkie contents" width="400">

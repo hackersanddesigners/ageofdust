@@ -36,8 +36,8 @@ To do:
 
 To do:
 * right resistors selection for trigger different tracks
-* check mp3 module with ESP32 wroom devkit
-* check mp3 module with attiny85
+* check mp3 module with ESP32 wroom devkit - done
+* check mp3 module with attiny85 - done
 
 
 ## Questions for Juliette

@@ -81,6 +81,15 @@ Downside:
 
  <img src="./images/dfplayer_schem.png" alt="DFPlayer module" width="500"> 
 
+#### MP3 player and Attiny85
+ <img src="./images/attiny85_dfplayer_bb.png" alt="DFPlayer module" width="200"> 
+ 
+ #### MP3 player and Digispark Attiny85
+ <img src="./images/attiny85_digispark_dfplayer_bb.png" alt="DFPlayer module" width="200"> 
+ 
+ #### MP3 player and DOIT esp32 DEVKIT
+ <img src="./images/doit_esp32_devkit_dfplayer_bb.png" alt="DFPlayer module" width="200">
+
 
 ### ISD1820 Voice recording module
 

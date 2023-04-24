@@ -383,13 +383,30 @@ I didn't try outside on a sunny day yet (it hasn't been sunny). As single cell I
 
 ### DYNAMO powered
 
-instructable: https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf
+instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf)
 
 <img src="./images/dynamo_00.png" alt="walkie talkie contents" width="200">
 <img src="./images/dynamo_01.png" alt="walkie talkie contents" width="400">
 <img src="./images/dynamo_02.png" alt="walkie talkie contents" width="400">
 <img src="./images/dynamo_03.png" alt="walkie talkie contents" width="400">
 <img src="./images/dynamo_04.png" alt="walkie talkie contents" width="400">
+
+**Materials for DIY dynamo**
+
+* 6V dynamo at [Praxis](https://www.praxis.nl/tuin-buitenleven/fiets/fietsverlichting/dresco-dynamo-links-zwart-6v-3w/5599378?channable=02490e69640035353939333738d6#specs) €4 
+
+<img src="./images/dynamo_praxis.png" alt="image of bicycle dynamo" width="200">
+
+* Bridge rectifier (AC to DC) = 
+* Capacitor 1 = 
+* Capacitor 2 = 
+* Capacitor 3 = 
+* 5V regulator (converts 6V into 5V)
+* 2x resistor 51 ohm
+* 1x resistor 43 ohm
+* 1x resistor 75 ohm
+* perfboard or breadboard
+* 
 
 ## Casing and integration
 

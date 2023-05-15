@@ -20,21 +20,25 @@ Research for age of dust tools as part of worldbuilding.
 * I found a nice walkie talkie option which I opened up, looks promising (see below)
 * I listed all components in a spreadsheet with some info on operating voltages, supplier link and prices etc so we can keep track easily, see [files > components.xlsx](./files/components.xlsx). I also added some other options here that might be fun (in blue and red).
 
+
 #### ISD1820:
 * ISD1820 all options, input and output (all wiring diagrams) See here [./files > ISD1820_wiring.pptx](./files/ISD1820_wiring.pptx)
+* power consumption: up to 50mA during playback at 5V with sensor module as trigger
 
 To do:
-* audio amp
+
 * power source: 
  - check the spec of the solar panel kit.
  - add reference for dynamo charger
  - evalute wind turbine
+
 
 #### DF MP3 player:
 * Controlling DF player w resistors needs to be quite precise to get all buttons to play different track. I need to look into this a bit more to see which work well with (a combination of) standard resistors. 
 	* Could be smart to figure out how to control with an ESP32 wroom devkit? (we have a bunch of those and they're cheap, looks like is possible). Can be controlled via UART (e.g. Arduino UNO, but have also seen [examples with ESP32](https://youtu.be/kq2RLz65_w0), which we have few of at H&D? Looked into ATtiny85 digispark a bit, [could work](https://github.com/wagiminator/ATtiny85-TinyDFPlayer) with some tuning of the internal oscillator, but not super easy I guess.
 
 To do:
+
 * right resistors selection for trigger different tracks
 * check mp3 module with ESP32 wroom devkit - done
 * check mp3 module with attiny85 - done
@@ -104,6 +108,11 @@ Recording time can be adjusted to 20 secs by replacing jumper with a 200K resist
 
 [**All wiring diagrams** in files > ISD1820_wiring.pptx](./files/ISD1820_wiring.pptx)
 
+**Power consumption during playback at 5V with tilt switch module as trigger:**
+
+* up to 50mA with 8ohm/0.5W speaker as output ([ekulit LSM-50F](https://www.reichelt.nl/nl/nl/miniatuur-luidspreker-0-2w-8-ohm-50mm-bl-50-p5631.html?search=ekulit+lsm-50F&&r=1))
+* up to 15mA with 800ohm piezo disk as output ([LF-W50E10B-C](https://www.conrad.de/de/p/tru-components-717770-piezokeramisches-element-spannung-30-v-1-st-1566917.html))
+* up to 65mA with 8ohm/1W [bone conductor transducer](https://www.tinytronics.nl/shop/en/audio/speakers/speakers/bone-conductor-transducer-8%CF%89-1w) as output
 
  <img src="./images/ISD1820_all.jpg" alt="DFPlayer module" width="1600"> 
  
@@ -123,7 +132,7 @@ Recording time can be adjusted to 20 secs by replacing jumper with a 200K resist
 * slide switch to loop
 * slide switch to drive speaker directly
 
-Downside: 
+**Limitations:** 
 
 * Only one file can be stored and played on this device.
 * Built-in amp very low. You can attach a jack to the speaker pins and connect to battery powered speaker though, or connect a stronger amplifier (see below).

@@ -429,7 +429,7 @@ instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https
 * 1x resistor 75 ohm
 * perfboard or breadboard
 
-The choise of the Voltage Regulator, Cap 2 and Cap 3 depends on the Dynamo.
+The choice of the Voltage Regulator, Cap 2 and Cap 3 depends on the Dynamo.
 
 In the case of Dynamo 6V:
 * 5V output regulator, at least current from 0.5 up to 1.5A: the only one through hole I found in Fernel is MCP1826S-5002E/AB: [link](https://it.farnell.com/en-IT/microchip/mcp1826s-5002e-ab/ic-ldo-5-0v-1a-to-220-3/dp/1578425)
@@ -440,6 +440,10 @@ In case of Dynamo 6V/12V/24V
 * in digikey I found the LM2940CT-5.0/LF01, [link](https://www.digikey.com/en/products/detail/texas-instruments/LM2940CT-5-0/3701353). But you are on the limit! Actually they recomend voltage inpit 7V. This regulator can be used also with a 12V dynamo.
 * Capacitor 3: 22uF (tantalum)
 * Capacitor 2: 0.47uF
+
+**@ EMMA: I've tried making a schematic and breadboarded version from the example and your info for the 6V/12V/24V option. I hope the color codes make legible a bit the thinking process. If you want to check the fritz for proper routing, the fritzing sketch is under Files > dynamo_power_v1.fzz.**
+
+  <img src="./images/power_circuit_dynamo.jpg" alt="circuit for power supply w dynamo">
 
 ## Casing and integration
 

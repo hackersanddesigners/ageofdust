@@ -88,16 +88,20 @@ Downside:
 #### MP3 player and Attiny85
  <img src="./images/attiny85_dfplayer_bb.png" alt="DFPlayer module" width="200"> 
  
+ 
  #### MP3 player and Digispark Attiny85
  <img src="./images/attiny85_digispark_dfplayer_bb.png" alt="DFPlayer module" width="200"> 
  
  #### MP3 player and DOIT esp32 DEVKIT
  <img src="./images/doit_esp32_devkit_dfplayer_bb.png" alt="DFPlayer module" width="200">
  
- **Code**
- * [stand alon one song play](./codes/doit_esp32_dev_dfplayer/doit_esp32_dev_dfplayer.ino)
+ Code: [stand alon one song play](./codes/doit_esp32_dev_dfplayer/doit_esp32_dev_dfplayer.ino)
  
- **Power it:
+ **Current consumption**
+ The current consumption mostly depends on the volume. The volume can be set either in the code or with a switch connected to pin IO2/GND., long press increases the volume. The volume depends also on the mp3 file.
+—> current consumption testes: 200mA / 500mA.
+
+ **Power it**
  * usb cable (5V)
  * Vin pin, 5V up to 7V (maybe 12V)
 

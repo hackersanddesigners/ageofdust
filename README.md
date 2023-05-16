@@ -417,16 +417,26 @@ instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https
 
 <img src="./images/dynamo_praxis.png" alt="image of bicycle dynamo" width="200">
 
-* Bridge rectifier (AC to DC) = 
-* Capacitor 1 = 
-* Capacitor 2 = 
-* Capacitor 3 = 
-* 5V regulator (converts 6V into 5V)
+* Bridge rectifier (AC to DC) = [AM151](https://uk.farnell.com/multicomp/am151/bridge-rectifier-1-5a-100v/dp/9381430), Bridge Rectifier, Single Phase
+* Capacitor 1 = 2200uF electrolytic
+* Capacitor 2 = see below
+* Capacitor 3 = see below
+* 5V regulator (converts 6V into 5V) see below
 * 2x resistor 51 ohm
 * 1x resistor 43 ohm
 * 1x resistor 75 ohm
 * perfboard or breadboard
-* 
+
+The choise of the Voltage Regulator, Cap 2 and Cap 3 depends on the Dynamo.
+
+In the case of Dynamo 6V:
+* 5V output regulator, at least current from 0.5 up to 1.5A: the only one through hole I found in Fernel is MCP1826S-5002E/AB: [link](https://it.farnell.com/en-IT/microchip/mcp1826s-5002e-ab/ic-ldo-5-0v-1a-to-220-3/dp/1578425)
+* Capacitor 3 (on output): 10uF (tantalum cap, orientation!)
+* Capacitor 2 (on input): 4.7uF (Tantalum cap, orientation!)
+
+* in digikey I found the LM2940CT-5.0/LF01, [link](https://www.digikey.com/en/products/detail/texas-instruments/LM2940CT-5-0/3701353). But you are on the limit! Actually they recomend voltage inpit 7V. This regulator can be used also with a 12V dynamo.
+* Capacitor 3: 22uF (tantalum)
+* Capacitor 2: 0.47uF
 
 ## Casing and integration
 

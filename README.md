@@ -436,7 +436,7 @@ In the case of Dynamo 6V:
 * Capacitor 3 (on output): 10uF (tantalum cap, orientation!)
 * Capacitor 2 (on input): 4.7uF (Tantalum cap, orientation!)
 
-In case of Dynamo 6V/12V
+In case of Dynamo 6V/12V/24V
 * in digikey I found the LM2940CT-5.0/LF01, [link](https://www.digikey.com/en/products/detail/texas-instruments/LM2940CT-5-0/3701353). But you are on the limit! Actually they recomend voltage inpit 7V. This regulator can be used also with a 12V dynamo.
 * Capacitor 3: 22uF (tantalum)
 * Capacitor 2: 0.47uF

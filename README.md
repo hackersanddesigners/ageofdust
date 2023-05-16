@@ -93,6 +93,13 @@ Downside:
  
  #### MP3 player and DOIT esp32 DEVKIT
  <img src="./images/doit_esp32_devkit_dfplayer_bb.png" alt="DFPlayer module" width="200">
+ 
+ **Code**
+ * [stand alon one song play](./codes/doit_esp32_dev_dfplayer/doit_esp32_dev_dfplayer.ino)
+ 
+ **Power it:
+ * usb cable (5V)
+ * Vin pin, 5V up to 7V (maybe 12V)
 
 
 ### ISD1820 Voice recording module

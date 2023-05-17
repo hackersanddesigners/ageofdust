@@ -400,18 +400,23 @@ I didn't try outside on a sunny day yet (it hasn't been sunny). As single cell I
 
   <img src="./images/solar_indoor_LEDlb.jpg" alt="walkie talkie contents" width="400">
 
+**Alternative solar cells**
 
+I found two interesting options at reichelt. The first one has a lower voltage but higher current, so suitable for running motors and prob also speakers if we connect 3 in series:  
+
+* 2V, 380 mA [Solar SM2380 via Reichelt](https://www.reichelt.nl/nl/nl/vergoten-zonnecel-2-v-380-ma-solar-sm2380-p159957.html?&nbc=1)
+* 6V, 150 mA [Solar SM6150 via Reichelt](https://www.reichelt.nl/nl/nl/vergoten-zonnecel-6-v-150-ma-solar-sm6150-p159960.html?&nbc=1)
 
 
 ### DYNAMO powered
 
 instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf)
 
-<img src="./images/dynamo_00.png" alt="walkie talkie contents" width="200">
-<img src="./images/dynamo_01.png" alt="walkie talkie contents" width="400">
-<img src="./images/dynamo_02.png" alt="walkie talkie contents" width="400">
-<img src="./images/dynamo_03.png" alt="walkie talkie contents" width="400">
-<img src="./images/dynamo_04.png" alt="walkie talkie contents" width="400">
+<img src="./images/dynamo_00.png" alt="" width="200">
+<img src="./images/dynamo_01.png" alt="" width="400">
+<img src="./images/dynamo_02.png" alt="" width="400">
+<img src="./images/dynamo_03.png" alt="" width="400">
+<img src="./images/dynamo_04.png" alt="" width="400">
 
 **Materials for DIY dynamo**
 
@@ -419,33 +424,30 @@ instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https
 
 <img src="./images/dynamo_praxis.png" alt="image of bicycle dynamo" width="200">
 
-* Bridge rectifier (AC to DC) = [AM151](https://uk.farnell.com/multicomp/am151/bridge-rectifier-1-5a-100v/dp/9381430), Bridge Rectifier, Single Phase
-* Capacitor 1 = 2200uF electrolytic
-* Capacitor 2 = see below
-* Capacitor 3 = see below
-* 5V regulator (converts 6V into 5V) see below
-* 2x resistor 51 ohm
-* 1x resistor 43 ohm
-* 1x resistor 75 ohm
-* perfboard or breadboard
+**Parts list for use with 6V/12V/24V (up to 26V) dynamos**
 
-The choice of the Voltage Regulator, Cap 2 and Cap 3 depends on the Dynamo.
+* Bridge rectifier (AC to DC) = [AM151](https://uk.farnell.com/multicomp/am151/bridge-rectifier-1-5a-100v/dp/9381430), Bridge Rectifier, Single Phase >>> possible alternative (awaiting confirmation emma) [via Reichelt](https://www.reichelt.nl/nl/nl/bruggelijkrichter-400-v-1-5-a-b250c1500g-vis-p219410.html?&trstct=pol_11&nbc=1)
+* Capacitor 1 = 22uF electrolytic [via Reichelt](https://www.reichelt.nl/nl/nl/elco-radiaal-22-uf-63-v-105-c-nhg-a-22u-63-p200344.html?&nbc=1)
+* Capacitor 2 = 0.47uF tantalum [via Reichelt](https://www.reichelt.nl/nl/nl/tantaal-condensator-rm-2-5-0-47-f-35v-tantal-0-47-35-p20328.html?&nbc=1)
+* Capacitor 3 = 22uF tantalum [via Reichelt](https://www.reichelt.nl/nl/nl/tantalkondensator-22-f-35-v-avx-tap226m035cc-p246462.html?&nbc=1)
+* 5V regulator (converts 6V into 5V) [LM2940CT5 via Reichelt](https://www.reichelt.nl/nl/nl/spanningsregelaar-5-0v-1a-to-220-lm-2940-ct5-p39455.html?&nbc=1) But you are on the limit! Actually they recomend voltage inpit 7V. This regulator can be used also with a 12V dynamo.
+* 2x resistor 51 ohm [via Reichelt](https://www.reichelt.nl/nl/nl/koolstoffilmweerstand-1-4w-5-51-ohm-1-4w-51-p1441.html?&trstct=pol_0&nbc=1)
+* 1x resistor 43 ohm [via Reichelt](https://www.reichelt.nl/nl/nl/koolstoffilmweerstand-1-4w-5-43-ohm-1-4w-43-p1427.html?&trstct=pol_0&nbc=1)
+* 1x resistor 75 ohm [via Reichelt](https://www.reichelt.nl/nl/nl/koolstoffilmweerstand-1-4w-5-75-ohm-1-4w-75-p1466.html?&trstct=pol_0&nbc=1)
+* perfboard lanes [via Reichelt](https://www.reichelt.nl/nl/nl/bandroosterprintplaat-hardpapier-160x100mm-up-720hp-p23958.html?&nbc=1)
 
-In the case of Dynamo 6V:
-* 5V output regulator, at least current from 0.5 up to 1.5A: the only one through hole I found in Fernel is MCP1826S-5002E/AB: [link](https://it.farnell.com/en-IT/microchip/mcp1826s-5002e-ab/ic-ldo-5-0v-1a-to-220-3/dp/1578425)
-* Capacitor 3 (on output): 10uF (tantalum cap, orientation!)
-* Capacitor 2 (on input): 4.7uF (Tantalum cap, orientation!)
-
-In case of Dynamo 6V/12V/24V
-* in digikey I found the LM2940CT-5.0/LF01, [link](https://www.digikey.com/en/products/detail/texas-instruments/LM2940CT-5-0/3701353). But you are on the limit! Actually they recomend voltage inpit 7V. This regulator can be used also with a 12V dynamo.
-* Capacitor 3: 22uF (tantalum)
-* Capacitor 2: 0.47uF
 
 **@ EMMA: I've tried making a schematic and breadboarded version from the example and your info for the 6V/12V/24V option. I hope the color codes make legible a bit the thinking process. If you want to check the fritz for proper routing, the fritzing sketch is under Files > dynamo_power_v1.fzz.**
 
 [OR just get experiment PCB lanes (continuous) at tinytronics €2 a pop](https://www.tinytronics.nl/shop/en/tools-and-mounting/prototyping-supplies/experiment-pcbs/experiment-pcb-9cm*15cm-lanes)
 
   <img src="./images/power_circuit_dynamo.jpg" alt="circuit for power supply w dynamo">
+  
+  **Alternative: (only with 6V dynamos)**
+
+* 5V output regulator, at least current from 0.5 up to 1.5A: the only one through hole I found in Fernel is MCP1826S-5002E/AB: [link](https://it.farnell.com/en-IT/microchip/mcp1826s-5002e-ab/ic-ldo-5-0v-1a-to-220-3/dp/1578425)
+* Capacitor 3 (on output): 10uF (tantalum cap, orientation!)
+* Capacitor 2 (on input): 4.7uF (Tantalum cap, orientation!)
 
 ## Casing and integration
 

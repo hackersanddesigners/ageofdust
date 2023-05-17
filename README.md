@@ -443,6 +443,8 @@ In case of Dynamo 6V/12V/24V
 
 **@ EMMA: I've tried making a schematic and breadboarded version from the example and your info for the 6V/12V/24V option. I hope the color codes make legible a bit the thinking process. If you want to check the fritz for proper routing, the fritzing sketch is under Files > dynamo_power_v1.fzz.**
 
+[OR just get experiment PCB lanes (continuous) at tinytronics €2 a pop](https://www.tinytronics.nl/shop/en/tools-and-mounting/prototyping-supplies/experiment-pcbs/experiment-pcb-9cm*15cm-lanes)
+
   <img src="./images/power_circuit_dynamo.jpg" alt="circuit for power supply w dynamo">
 
 ## Casing and integration

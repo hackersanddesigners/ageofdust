@@ -430,10 +430,7 @@ instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https
 * Capacitor 1 = 2200uF electrolytic [via Reichelt](https://www.reichelt.nl/nl/nl/elko-radiaal-2200-f-25-v-105-c-16-x-25-mm-rm-7-5-muniti-rad-105-2-200-25-p42407.html?&trstct=pol_0&nbc=1)
 * Capacitor 2 = 0.47uF tantalum [via Reichelt](https://www.reichelt.nl/nl/nl/tantaal-condensator-rm-2-5-0-47-f-35v-tantal-0-47-35-p20328.html?&nbc=1)
 * Capacitor 3 = 22uF tantalum [via Reichelt](https://www.reichelt.nl/nl/nl/tantalkondensator-22-f-35-v-avx-tap226m035cc-p246462.html?&nbc=1)
-* 5V regulator (converts 6V into 5V) [LM2940CT5 via Reichelt](https://www.reichelt.nl/nl/nl/spanningsregelaar-5-0v-1a-to-220-lm-2940-ct5-p39455.html?&nbc=1) But you are on the limit! Actually they recomend voltage inpit 7V. This regulator can be used also with a 12V dynamo.
-* 2x resistor 51 ohm [via Reichelt](https://www.reichelt.nl/nl/nl/koolstoffilmweerstand-1-4w-5-51-ohm-1-4w-51-p1441.html?&trstct=pol_0&nbc=1)
-* 1x resistor 43 ohm [via Reichelt](https://www.reichelt.nl/nl/nl/koolstoffilmweerstand-1-4w-5-43-ohm-1-4w-43-p1427.html?&trstct=pol_0&nbc=1)
-* 1x resistor 75 ohm [via Reichelt](https://www.reichelt.nl/nl/nl/koolstoffilmweerstand-1-4w-5-75-ohm-1-4w-75-p1466.html?&trstct=pol_0&nbc=1)
+* 5V regulator (converts 6V into 5V) [LM2940CT5 via Reichelt](https://www.reichelt.nl/nl/nl/spanningsregelaar-5-0v-1a-to-220-lm-2940-ct5-p39455.html?&nbc=1) But you are on the limit! Actually they recomend voltage input 7V. This regulator can be used also with a 12V dynamo.
 * perfboard lanes [via Reichelt](https://www.reichelt.nl/nl/nl/bandroosterprintplaat-hardpapier-160x100mm-up-720hp-p23958.html?&nbc=1)
 
 
@@ -450,13 +447,25 @@ instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https
 * Capacitor 2 (on input): 4.7uF (Tantalum cap, orientation!)
 
   
-### Solar powered variation
+### Solar powered variations
 
-The same circuit can be used with solar cells in series (totalling > 5V!) instead of a dynamo. This one assumes 3x the 2V/380mA solar cells, in series they would supply 6V/380mA. Let's see if this can power the different outputs. Otherwise a formation of 3x2 for 6V/760mA seems to be suitable, but a little bulky (6 cells).
+The same circuit can be used with solar cells in series (totalling > 5V!) instead of a dynamo. In that case the bridge rectifier isn't needed because the solar panel already gives DC voltage.
 
-  <img src="./images/solar_powered_schem.png" alt="schematic of the solar powered circuit">
+**In series with 3x 2V/380mA solar cells**
 
-  <img src="./images/solar_powered_breadboard.png" alt="breadboard layout of the solar powered circuit">
+This one assumes 3x the 2V/380mA solar cells, in series they would supply 6V/380mA. Let's see if this can power the different outputs. 
+
+  <img src="./images/solar_powered_series_schem.png" alt="schematic of the solar powered circuit">
+
+  <img src="./images/solar_powered_series_breadboard.png" alt="breadboard layout of the solar powered circuit">
+
+**In parallel with 3x 6V/150mA solar cells**
+
+This one assumes 3x 6V/150mA solar cells. In parallel they would supply 6V/450mA.  Which should be enough for all our applications. 
+
+  <img src="./images/solar_powered_parallel_schem.png" alt="schematic of the solar powered circuit">
+
+  <img src="./images/solar_powered_parallel_breadb.png" alt="breadboard layout of the solar powered circuit">
 
   
 ## Casing and integration

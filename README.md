@@ -426,8 +426,8 @@ instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https
 
 **Parts list for use with 6V/12V/24V (up to 26V) dynamos**
 
-* Bridge rectifier (AC to DC) = [AM151](https://uk.farnell.com/multicomp/am151/bridge-rectifier-1-5a-100v/dp/9381430), Bridge Rectifier, Single Phase >>> possible alternative (awaiting confirmation emma) [via Reichelt](https://www.reichelt.nl/nl/nl/bruggelijkrichter-400-v-1-5-a-b250c1500g-vis-p219410.html?&trstct=pol_11&nbc=1)
-* Capacitor 1 = 22uF electrolytic [via Reichelt](https://www.reichelt.nl/nl/nl/elco-radiaal-22-uf-63-v-105-c-nhg-a-22u-63-p200344.html?&nbc=1)
+* Bridge rectifier (AC to DC) = [AM151](https://uk.farnell.com/multicomp/am151/bridge-rectifier-1-5a-100v/dp/9381430) or alternative [via Reichelt](https://www.reichelt.nl/nl/nl/bruggelijkrichter-400-v-1-5-a-b250c1500g-vis-p219410.html?&trstct=pol_11&nbc=1)
+* Capacitor 1 = 2200uF electrolytic [via Reichelt](https://www.reichelt.nl/nl/nl/elko-radiaal-2200-f-25-v-105-c-16-x-25-mm-rm-7-5-muniti-rad-105-2-200-25-p42407.html?&trstct=pol_0&nbc=1)
 * Capacitor 2 = 0.47uF tantalum [via Reichelt](https://www.reichelt.nl/nl/nl/tantaal-condensator-rm-2-5-0-47-f-35v-tantal-0-47-35-p20328.html?&nbc=1)
 * Capacitor 3 = 22uF tantalum [via Reichelt](https://www.reichelt.nl/nl/nl/tantalkondensator-22-f-35-v-avx-tap226m035cc-p246462.html?&nbc=1)
 * 5V regulator (converts 6V into 5V) [LM2940CT5 via Reichelt](https://www.reichelt.nl/nl/nl/spanningsregelaar-5-0v-1a-to-220-lm-2940-ct5-p39455.html?&nbc=1) But you are on the limit! Actually they recomend voltage inpit 7V. This regulator can be used also with a 12V dynamo.
@@ -437,18 +437,28 @@ instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https
 * perfboard lanes [via Reichelt](https://www.reichelt.nl/nl/nl/bandroosterprintplaat-hardpapier-160x100mm-up-720hp-p23958.html?&nbc=1)
 
 
-**@ EMMA: I've tried making a schematic and breadboarded version from the example and your info for the 6V/12V/24V option. I hope the color codes make legible a bit the thinking process. If you want to check the fritz for proper routing, the fritzing sketch is under Files > dynamo_power_v1.fzz.**
+**@ EMMA: I've tried making a schematic and breadboarded version from the example and your info for the 6V/12V/24V option. I hope the color codes make legible a bit the thinking process. If you want to check the fritz for proper routing, the fritzing sketch is under Files > dynamo_v2_noresistors.fzz. _UPDATE_: I removed the resistors and made a version without bridge rectifier for the solar powered version.**
 
 [OR just get experiment PCB lanes (continuous) at tinytronics €2 a pop](https://www.tinytronics.nl/shop/en/tools-and-mounting/prototyping-supplies/experiment-pcbs/experiment-pcb-9cm*15cm-lanes)
 
-  <img src="./images/power_circuit_dynamo.jpg" alt="circuit for power supply w dynamo">
+  <img src="./images/power_circuit_dynamo_noresistors.jpg" alt="circuit for power supply w dynamo_noresistors">
   
-  **Alternative: (only with 6V dynamos)**
+**Alternative: (only with 6V dynamos)**
 
 * 5V output regulator, at least current from 0.5 up to 1.5A: the only one through hole I found in Fernel is MCP1826S-5002E/AB: [link](https://it.farnell.com/en-IT/microchip/mcp1826s-5002e-ab/ic-ldo-5-0v-1a-to-220-3/dp/1578425)
 * Capacitor 3 (on output): 10uF (tantalum cap, orientation!)
 * Capacitor 2 (on input): 4.7uF (Tantalum cap, orientation!)
 
+  
+### Solar powered variation
+
+The same circuit can be used with solar cells in series (totalling > 5V!) instead of a dynamo. This one assumes 3x the 2V/380mA solar cells, in series they would supply 6V/380mA. Let's see if this can power the different outputs. Otherwise a formation of 3x2 for 6V/760mA seems to be suitable, but a little bulky (6 cells).
+
+  <img src="./images/solar_powered_schem.png" alt="schematic of the solar powered circuit">
+
+  <img src="./images/solar_powered_breadboard.png" alt="breadboard layout of the solar powered circuit">
+
+  
 ## Casing and integration
 
 WIP

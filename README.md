@@ -1,36 +1,38 @@
 # Age of Dust
 
-Research for age of dust tools as part of worldbuilding.
+Research for age of dust tools as part of worldbuilding workshops, by Loes and Emma, for Juliette!
 
-## Wishes
+## Requirements
 
 * record and playback audio (both single track that overwrites, and multiple that are stored and can be played later)
 * freedom in designing the interaction with the tool and how it looks
 	* no-coding options will help with this
-* possibility to recycle hardware parts
-* walkie-talkie-like system could be fun 
+* possibility to recycle hardware parts (e.g. dynamos, switches)
+* walkie-talkie-like system would be nice! 
+* Number of workshop participants: 10-20 working in pairs
+* Budget: max € 750 for all materials, components, tools
 
+## Workflow
 
-## Update for Emma and questions
+* Research some options to make sure things work together, based on wishes
+* Document some examples for participants on how things work/connect
+* The actual exploration - building tools for the script - will happen in the workshop
 
-* Juliette and I love all these options and would like to offer them all :) <3
-* Loud sound is not a must, Juliette is interested in a "different ways of listening" approach <3 <3
-* DIY switch examples here [./switches/diyswitches.md](./switches/diyswitches.md)
-* I added a solar power option at the bottom that we've used before, we have some of these in the studio, so might be worth taking a look? YES
-* I found a nice walkie talkie option which I opened up, looks promising (see below)
-* I listed all components in a spreadsheet with some info on operating voltages, supplier link and prices etc so we can keep track easily, see [files > components.xlsx](./files/components.xlsx). I also added some other options here that might be fun (in blue and red).
+## To Do 
+
+* power DFplayer directly w solar panel test
+* power walkie talkie directly w solar panel test
+* make dynamo power circuit
+* study different dynamos (how to connect)
+* design mechanism to turn dynamo fast without bicycle wheel 
+* make BOM and order for summer camp workshop
+* (emma) play/pauze functionality DF player
 
 
 #### ISD1820:
+
 * ISD1820 all options, input and output (all wiring diagrams) See here [./files > ISD1820_wiring.pptx](./files/ISD1820_wiring.pptx)
 * power consumption: up to 50mA during playback at 5V with sensor module as trigger
-
-To do:
-
-* power source: 
- - check the spec of the solar panel kit.
- - add reference for dynamo charger
- - evalute wind turbine
 
 
 #### DF MP3 player:
@@ -40,26 +42,10 @@ To do:
 To do:
 
 * right resistors selection for trigger different tracks
-* check mp3 module with ESP32 wroom devkit - done
-* check mp3 module with attiny85 - done
+* check mp3 module with ESP32 wroom devkit - DIDNT WORK
+* check mp3 module with attiny85 - WORKS - (need programmer)
+* check mp3 module with digispark - WORKS (no programmer needed!)
 
-
-## Questions for Juliette
-
-* how many participants are we thinking? > 10-20 working in pairs
-* it could be cool to go [soft](https://www.kobakant.at/DIY/) (wearable props), but this is an entirely different making process. Could also be wearable but hard :)
-* What kind of materials would you prefer for casings? Natural materials? Plastics? Recycled? Integrated into costume?
-
-## Budget
-
-Max € 750 for all materials, components, tools
-
-
-## Workflow
-
-* Research some options to make sure things work together, based on wishes
-* Document some examples for participants on how things work/connect
-* The actual exploration - building tools for the script - will happen in the workshop
 
 ## Audio in: recording & playback
 
@@ -83,27 +69,71 @@ Downside:
 
  <img src="./images/dfplayer.jpg" alt="DFPlayer module" width="200"> 
 
+ *Below: diagram for controlling DFplayer with switches and resistors (as standalone module)*
+
  <img src="./images/dfplayer_schem.png" alt="DFPlayer module" width="500"> 
 
-#### MP3 player and Attiny85
- <img src="./images/attiny85_dfplayer_bb.png" alt="DFPlayer module" width="200"> 
+#### MP3 player and Attiny85 >> CHECKED
+
+ **Code for ATtiny**: [Play track for 10 sec, then move to next](./codes/attiny85_dfplayer/attiny85_dfplayer.ino)
+
+* Hook-up guide to program the ATtiny chip with a programmer stick [here](https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/)
  
- Code: [One song play for 10sec](./codes/attiny85_dfplayer/attiny85_dfplayer.ino)
+* Hook-up guide to program the ATtiny chip with an arduino UNO [here](https://circuitdigest.com/microcontroller-projects/programming-attiny85-microcontroller-ic-using-arduino)
+
+* Video of check: [./images/attiny_dfplayer_demo.mp4](./images/attiny_dfplayer_demo.mp4)
+
+* Downsides: need a separate programmer (e.g. uno or programmer stick). More efficient to use digispark boards although they are more expensive that ATtiny. 
+ 
+  <img src="./images/programattiny85.png" alt="DFPlayer module" width="500"> 
+ 
+ <img src="./images/dfplayer_attiny_diagram.png" alt="Attiny diagram" width="600"> 
+
+ <img src="./images/dfplayer_attiny_breadboard.png" alt="Breadboarded" width="800"> 
  
  
- #### MP3 player and Digispark Attiny85
- <img src="./images/attiny85_digispark_dfplayer_bb.png" alt="DFPlayer module" width="200"> 
  
- #### MP3 player and DOIT esp32 DEVKIT
- <img src="./images/doit_esp32_devkit_dfplayer_bb.png" alt="DFPlayer module" width="200">
+#### MP3 player and DigiSpark board >> CHECKED
  
- Code: [One song play](./codes/doit_esp32_dev_dfplayer/doit_esp32_dev_dfplayer.ino)
+The Digispark is also an ATtiny based board but with an integrated programmer (Micronucleus). 
+ 
+Go through the installation instructions [here](http://digistump.com/wiki/digispark/tutorials/connecting) to get all dependencies. 
+ 
+NOTE: you only plug in this board after you hit the upload button :) Read above tutorial for all differences.
+ 
+NOTE ON CODE: you need to include the Digispark SoftSerial library in the sketch (different than the one above). I believe it comes along when you install the digispark boards. 
+
+ **Code for DigiSpark**: [Play track for 10 sec, then move to next](./codes/digispark_dfPlayer/digispark_dfPlayer.ino)
+ 
+  **Code for DigiSpark - NOT CHECKED!**: [Use trigger/switch to play 10 secs of the next song in the folder](./codes/digispark_dfPlayer_switch/digispark_dfPlayer_switch.ino)
+
+<img src="./images/attiny85_digispark_dfplayer_bb.png" alt="DFPlayer module" width="300"> 
+ 
+
+ 
+#### MP3 player and DOIT esp32 DEVKIT >> DIDNT WORK
+
+**note loes: not sure why, but the player didnt wanna play anything. Also: the esp32 operates between 2.2-3.6V so with the other stuff we'll be adding we might be better off opting for the digispark / attiny85 1.8-5.5V.**
+ 
+<img src="./images/doit_esp32_devkit_dfplayer_bb.png" alt="DFPlayer module" width="800">
+ 
+Code: [One song play](./codes/doit_esp32_dev_dfplayer/doit_esp32_dev_dfplayer.ino)
+ 
+ 
+ **Notes on filenames**
+ 
+The folder name needs to be mp3, placed under the SD card root directory, and the mp3 file name needs to be 4 digits, for example, "0001.mp3", placed under the mp3 folder. Like so: 
+
+ <img src="./images/SD_file_structure.png" alt="DFPlayer module" width="800"> 
+
  
  **Current consumption**
+ 
  The current consumption mostly depends on the volume. The volume can be set either in the code or with a switch connected to pin IO2/GND., long press increases the volume. The volume depends also on the mp3 file.
 —> current consumption testes: 200mA / 500mA.
 
  **Power it**
+ 
  * usb cable (5V)
  * Vin pin, 5V up to 7V (maybe 12V)
 
@@ -202,9 +232,11 @@ For wiring diagram is see here [./files > ISD1820_wiring.pptx](./files/ISD1820_w
  <img src="./images/vellemanamp.jpg" alt="mini speakers" width="200"> 
  
  
-## Triggers: switches and sensors
+## Triggers: switches
 
 You can make your digital sensor or use already made digital sensors. The options below are plug and play without coding or breadboard (just jumpers/alligator clips). The pre-assembled boards allow you to calibrate an analog sensor as switch (e.g. light sensor), by turning the screw on the board. You can also use any on/off switches you salvage from old devices and use them as a trigger
+
+Some DIY switch examples here [./switches/diyswitches.md](./switches/diyswitches.md)
 
 ### any metal/conductive parts 
 
@@ -345,27 +377,26 @@ This took me an hour and a half, it's quire a surgeon's job. But it still works!
  <img src="./images/walkie2.jpg" alt="walkie talkie contents" width="500"> 
 
 
-## Power supplies
+## Power supplies - tests
 
-**WIP** 
+I tested some configurations of the solar panels with the IDS1820 module, a tilt switch, and the bone conductor transducer. 
 
-### Solar powered
+|     **IDS1820 + tilt switch + ...**    | Image                                                                                        | Type                                                                                                                                                                                        | Config   | Voltage | Max current | Inside, shadow (sunny day) | Inside direct sun | Outside, shadow (sunny day) | Outside, direct sun | Videos                                                                                                                                                   |
+|---------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|---------|-------------|----------------|-------------------|-----------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2x 2V   | <img src="./images/2V_380mA_solarcell.png" alt="2V solar cell back and front" width="200">   | [Solar SM2380 - 2V/380mA - via Reichelt](https://www.reichelt.nl/nl/nl/vergoten-zonnecel-2-v-380-ma-solar-sm2380-p159957.html?&nbc=1)                                                       | Series   | 4V      | 380mA       | NO             | YES               | YES (lower)     | YES                 | [./images/2cells_inside_IDSmodule_tilt.mp4]() [./images/2x2Vcells_outside_IDSmodule_tilt.mp4]() [./images/2x2Vcells_outside_IDSmodule_tilt_coverd.mp4]() |
+| 3x 2V   | <img src="./images/2V_380mA_solarcell.png" alt="2V solar cell back and front" width="200">   | [Solar SM2380 - 2V/380mA - via Reichelt](https://www.reichelt.nl/nl/nl/vergoten-zonnecel-2-v-380-ma-solar-sm2380-p159957.html?&nbc=1)                                                       | Series   | 6V      | 380mA       | NO             | YES               | YES (lower)     | YES                 | [.images/3cells_inside_IDSmodule_tilt.mp4]()                                                                                                             |
+| 1x 6V   | <img src="./images/6V_150mA_solarcell.png" alt="6V solar cell back and front" width="200">   | [Solar SM6150 - 6V/150mA - via Reichelt](https://www.reichelt.nl/nl/nl/vergoten-zonnecel-6-v-150-ma-solar-sm6150-p159960.html?&nbc=1)                                                       | n/a      | 6V      | 150mA       | NO             | YES               | YES (lower)     | YES                 | [./images/1cell_6V_outside.mp4]()                                                                                                                        |
+| 2x 6V   | <img src="./images/6V_150mA_solarcell.png" alt="6V solar cell back and front" width="200">   | [Solar SM6150 - 6V/150mA - via Reichelt](https://www.reichelt.nl/nl/nl/vergoten-zonnecel-6-v-150-ma-solar-sm6150-p159960.html?&nbc=1)                                                       | Parallel | 6V      | 300mA       | NO             | YES               | YES (lower)     | YES                 | [./images/2cells_inside_IDSmodule_tilt.mp4]() [./images/2x6Vcells_outside_IDSmodule_tilt_coverd.mp4]()                                                   |
+| 1x 5.5V | <img src="./images/solar_seedstudio5v5.png" alt="5V5 solar cell back and front" width="200"> | [Seeed Studio Zonnepaneel 5V5/100mA via Tinytronics](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/seeed-studio-zonnepaneel-5.5v-170ma-80x100mm-met-jst-ph-connector) | n/a      | 5.5V    | 170mA       | NO             | YES               | YES (lower)     | YES                 |                                                                                                                                                          |
+| 2x 5.5V | <img src="./images/solar_seedstudio5v5.png" alt="5V5 solar cell back and front" width="200"> | [Seeed Studio Zonnepaneel 5V5/100mA via Tinytronics](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/seeed-studio-zonnepaneel-5.5v-170ma-80x100mm-met-jst-ph-connector) | Parallel | 5.5V    | 340mA       | NO             | YES               | YES (lower)     | YES                 | [./images/2x5V5cells_outside_IDSmodule_tilt.mp4]()                                                                                                       |
 
->> We have a bunch of these kits from another solar project. Could be worth checking out for this workshop? 
-
-* LilyGO TTGO T-Bat w 18650 Li-on battery holder CN3065 € 5,50 [via Tinytronics](https://www.tinytronics.nl/shop/nl/power/bms-en-laders/li-ion-en-li-po/met-protectiecircuit/lilygo-ttgo-t-bat-met-18650-batterijhouder-cn3065)
-	* Vin: 5V (via micro USB connector) OR 4.5-6V via solar cell connector OR solar cell via JST connector
-	* Vout: 5V via USB A connector or via JST-PH connector
-* Li-on 18650 battery 3400mA - 10A - € 6,00 [Via tinytronics](https://www.tinytronics.nl/shop/nl/power/batterijen/18650/lg-18650-li-ion-batterij-3400mah-10a-inr18650-mj1)
-* Seeed Studio Solar panels 5.5V 100mA - 55x70mm with JST-PH connector €4,25 [via Tinytronics](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/seeed-studio-zonnepaneel-5.5v-100ma-55x70mm-met-jst-ph-connector). Also available: 5.5V 170mA but has bulkier size [via tinytronics, €6,50](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/seeed-studio-zonnepaneel-5.5v-170ma-80x100mm-met-jst-ph-connector)
-
- <img src="./images/lilygoboard.jpg" alt="LilyGO charging board" width="500"> 
 
 ### Solar panels test
- <img src="./images/solar_indoor.jpg" alt="walkie talkie contents" width="300">
-  <img src="./images/solar_outdoor.jpg" alt="walkie talkie contents" width="300">
-   <img src="./images/solar_indoor_covered.jpg" alt="walkie talkie contents" width="300">
-    <img src="./images/solar_indoor_flashlight.jpg" alt="walkie talkie contents" width="300">
+
+ <img src="./images/solar_indoor.jpg" alt="" width="300">
+  <img src="./images/solar_outdoor.jpg" alt="" width="300">
+   <img src="./images/solar_indoor_covered.jpg" alt="" width="300">
+    <img src="./images/solar_indoor_flashlight.jpg" alt="" width="300">
   
 with the use of a DC-DC converter, € 3 [via TinyTronics](https://www.tinytronics.nl/shop/en/power/voltage-converters/buck-(step-down)-converters/dc-dc-ajustable-step-down-buck-converter-lm2596-3a), you can power directly the board, without battery.
 
@@ -399,13 +430,6 @@ I didn't try outside on a sunny day yet (it hasn't been sunny). As single cell I
    <img src="./images/solar_indoor_dark.jpg" alt="walkie talkie contents" width="400">
 
   <img src="./images/solar_indoor_LEDlb.jpg" alt="walkie talkie contents" width="400">
-
-**Alternative solar cells**
-
-I found two interesting options at reichelt. The first one has a lower voltage but higher current, so suitable for running motors and prob also speakers if we connect 3 in series:  
-
-* 2V, 380 mA [Solar SM2380 via Reichelt](https://www.reichelt.nl/nl/nl/vergoten-zonnecel-2-v-380-ma-solar-sm2380-p159957.html?&nbc=1)
-* 6V, 150 mA [Solar SM6150 via Reichelt](https://www.reichelt.nl/nl/nl/vergoten-zonnecel-6-v-150-ma-solar-sm6150-p159960.html?&nbc=1)
 
 
 ### DYNAMO powered
@@ -447,7 +471,7 @@ instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https
 * Capacitor 2 (on input): 4.7uF (Tantalum cap, orientation!)
 
   
-### Solar powered variations
+### Solar powered AND regulated
 
 The same circuit can be used with solar cells in series (totalling > 5V!) instead of a dynamo. In that case the bridge rectifier isn't needed because the solar panel already gives DC voltage.
 

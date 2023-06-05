@@ -20,10 +20,11 @@ Research for age of dust tools as part of worldbuilding workshops, by Loes and E
 
 ## Latest updates - 5 june
 
-* direct powering ISD voice recording device with solar cells and triggering it w sensor module can be done w 2 cells and also works inside in direct sunlight. 
-* powering mp3 player AND microcontroller AND speaker directly w solar seems feasible with 2-3X 5-6V cells in direct sun outside (not inside). Didn't add sensor module yet.. Really on the boundary though. Need to test some things again, ordered additional [5V solar cells](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/zonnepaneel-5v-200ma-110x80mm) to try 3 cell set-up. 
+* direct powering ISD voice recording device with solar cells and triggering it w sensor module can be done w 2 cells and also works inside in direct sunlight. Great! We will use this for summer camp so that's all good. 
+* powering mp3 player AND microcontroller AND speaker directly w solar seems feasible with 2-3X 5-6V cells in direct sun outside (not inside). Didn't add sensor module yet.. Really on the boundary though. Need to test some things again, ordered additional [5V solar cells](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/zonnepaneel-5v-200ma-110x80mm) to try 3 cell set-up. We'd like to try this in the fall not for camp, so no big rushs
 * Also ordered this regulated big one 5V/1A, worth a try [via TinyTronics](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/zonnepaneel-met-dc-dc-converter-en-usb-5v-1a)
 * Bone conductor draws too much for 2x 5-6V cells when used in full set up with the other components. Better results w piezo and mini 8 ohm speaker. Will try again with additional solar cells mentioned above. Might need 4 but didn't have 4 identical ones.
+* All this makes me wonder if the walkie talkies will be a feasible option, because they draw so much current. We don't need for summer camp so can decide later.
 * dynamos seem to need really high RPM to reach 6V, need setup w a bicycle wheel or belt system and pully. 
 * couldn't get esp32 to work, attiny and digispark are fine. 
 * Suggest to settle on the digispark as controller because it has integrated programmer and 5V/500mA regulator.

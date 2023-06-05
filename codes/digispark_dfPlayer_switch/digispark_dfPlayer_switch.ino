@@ -25,11 +25,13 @@
  ****************************************************/
 
 #include "Arduino.h"
-// #include "SoftwareSerial.h"   // USE THIS ONE WITH ATTINY85 (comes w IDE)
-#include <SoftSerial.h>           // DIGISPARK SOFTSERIAL (when using digispark board) 
+#include "SoftwareSerial.h"   // USE THIS ONE WITH ATTINY85 (comes w IDE)
+//#include <SoftSerial.h>           // DIGISPARK SOFTSERIAL (when using digispark board) 
 #include "DFRobotDFPlayerMini.h"
 
-SoftSerial mySoftwareSerial(1, 2); // RX, TX   // CHANGED TO SOFTSERIAL TO MATCH DIGISPARK LIB
+
+SoftwareSerial mySoftwareSerial(1, 2); // RX, TX // USE THIS ONE WITH ATTINY85
+// SoftSerial mySoftwareSerial(1, 2); // RX, TX   // USE THIS ONE WITH DIGISPARK LIB
 DFRobotDFPlayerMini myDFPlayer;
 
 const int switchPin = 3;

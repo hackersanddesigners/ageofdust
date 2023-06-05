@@ -18,14 +18,23 @@ Research for age of dust tools as part of worldbuilding workshops, by Loes and E
 * Document some examples for participants on how things work/connect
 * The actual exploration - building tools for the script - will happen in the workshop
 
+## Latest updates - 5 june
+
+* direct powering ISD voice recording device with solar cells and triggering it w sensor module can be done w 2 cells and also works inside in direct sunlight. 
+* powering mp3 player AND microcontroller AND speaker directly w solar seems feasible with 2-3X 5-6V cells in direct sun outside (not inside). Didn't add sensor module yet.. Really on the boundary though. Need to test some things again, ordered additional [5V solar cells](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/zonnepaneel-5v-200ma-110x80mm) to try 3 cell set-up. 
+* Also ordered this regulated big one 5V/1A, worth a try [via TinyTronics](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/zonnepaneel-met-dc-dc-converter-en-usb-5v-1a)
+* Bone conductor draws too much for 2x 5-6V cells when used in full set up with the other components. Better results w piezo and mini 8 ohm speaker. Will try again with additional solar cells mentioned above. Might need 4 but didn't have 4 identical ones.
+* dynamos seem to need really high RPM to reach 6V, need setup w a bicycle wheel or belt system and pully. 
+* couldn't get esp32 to work, attiny and digispark are fine. 
+* Suggest to settle on the digispark as controller because it has integrated programmer and 5V/500mA regulator.
+
 ## To Do 
 
-* power DFplayer directly w solar panel test
-* power walkie talkie directly w solar panel test
-* make dynamo power circuit
-* study different dynamos (how to connect)
-* design mechanism to turn dynamo fast without bicycle wheel 
-* make BOM and order for summer camp workshop
+* power DFplayer directly w solar panel test > only in direct sun outside
+* power walkie talkie directly w solar panel test 
+* make dynamo power circuit > didn't do yet bcs can only get 1.5V from dynamo so far.
+* study different dynamos (how to connect) > DONE
+* design mechanism to turn dynamo fast > asked Heerko
 * (emma) play/pauze functionality DF player
 
 
@@ -83,7 +92,9 @@ Downside:
 
 * Video of check: [./images/attiny_dfplayer_demo.mp4](./images/attiny_dfplayer_demo.mp4)
 
-* Downsides: need a separate programmer (e.g. uno or programmer stick). More efficient to use digispark boards although they are more expensive that ATtiny. 
+* Downsides: 
+	* need a separate programmer (e.g. uno or programmer stick). More efficient to use digispark boards although they are more expensive that ATtiny. 
+	* no on-board regulator (digispark does have)
  
   <img src="./images/programattiny85.png" alt="DFPlayer module" width="500"> 
  
@@ -95,11 +106,13 @@ Downside:
  
 #### MP3 player and DigiSpark board >> CHECKED
  
-The Digispark is also an ATtiny based board but with an integrated programmer (Micronucleus). 
+The Digispark is also an ATtiny based board but with an integrated programmer (Micronucleus). BONUS: you don't need a separate programmer board to upload the code. BONUS2: has an on-board 5V regulator that can switch 7-12V/500mA
  
 Go through the installation instructions [here](http://digistump.com/wiki/digispark/tutorials/connecting) to get all dependencies. 
  
 NOTE: you only plug in this board after you hit the upload button :) Read above tutorial for all differences.
+
+NOTE: I needed to use a USB-hub to upload the code, it couldn't find the board without. 
  
 NOTE ON CODE: you need to include the Digispark SoftSerial library in the sketch (different than the one above). I believe it comes along when you install the digispark boards. 
 
@@ -370,14 +383,10 @@ This took me an hour and a half, it's quire a surgeon's job. But it still works!
 	
 	*wasn't too stingy with the hotglue, but had to be careful not to break wires*
 
-* Earlier I got these €10 walkie talkies from flying tiger. **These don't actually have a microphone!** They just pick up noise and interference (so can work as noise making devices). Listen [here](./files/walkienoise.mp3). Available at [flying tiger €10](https://flyingtiger.com/nl/products/walkie-talkie-set-3034395?variant=41188458397894&srsltid=Ad5pg_E7P2uBBKjFlA-3Iy8jgljKbblaxprOBdHRD30Sq0cDsXl1De_tzrs&currency=eur)
-
- <img src="./images/walkie1.jpg" alt="walkie talkie contents" width="500"> 
-
- <img src="./images/walkie2.jpg" alt="walkie talkie contents" width="500"> 
-
 
 ## Power supplies - tests
+
+### Voice recorder module + tilt switch module
 
 I tested some configurations of the solar panels with the IDS1820 module, a tilt switch, and the bone conductor transducer. 
 
@@ -389,6 +398,10 @@ I tested some configurations of the solar panels with the IDS1820 module, a tilt
 | 2x 6V   | <img src="./images/6V_150mA_solarcell.png" alt="6V solar cell back and front" width="200">   | [Solar SM6150 - 6V/150mA - via Reichelt](https://www.reichelt.nl/nl/nl/vergoten-zonnecel-6-v-150-ma-solar-sm6150-p159960.html?&nbc=1)                                                       | Parallel | 6V      | 300mA       | NO             | YES               | YES (lower)     | YES                 | [./images/2cells_inside_IDSmodule_tilt.mp4]() [./images/2x6Vcells_outside_IDSmodule_tilt_coverd.mp4]()                                                   |
 | 1x 5.5V | <img src="./images/solar_seedstudio5v5.png" alt="5V5 solar cell back and front" width="200"> | [Seeed Studio Zonnepaneel 5V5/100mA via Tinytronics](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/seeed-studio-zonnepaneel-5.5v-170ma-80x100mm-met-jst-ph-connector) | n/a      | 5.5V    | 170mA       | NO             | YES               | YES (lower)     | YES                 |                                                                                                                                                          |
 | 2x 5.5V | <img src="./images/solar_seedstudio5v5.png" alt="5V5 solar cell back and front" width="200"> | [Seeed Studio Zonnepaneel 5V5/100mA via Tinytronics](https://www.tinytronics.nl/shop/nl/power/zonne-energie/zonnepanelen/seeed-studio-zonnepaneel-5.5v-170ma-80x100mm-met-jst-ph-connector) | Parallel | 5.5V    | 340mA       | NO             | YES               | YES (lower)     | YES                 | [./images/2x5V5cells_outside_IDSmodule_tilt.mp4]()                                                                                                       |
+
+### DFplayer + ATtiny85 + speakers 
+
+I have to redo these tests because my notes were terrible and I didn't have a switch module connected. But first impression is that powering both the mp3 player and driving a bone conductor transducer speaker is a bit two much for 1-2 cells. Better results with the piezo transducer and a regular tiny 8 ohm speaker. All of these only worked outside and in direct sunlight. Not in the shadow, not inside.
 
 
 ### Solar panels test
@@ -444,9 +457,24 @@ instructable: [https://waag.org/sites/waag/files/en-ditos-10-phone-lr.pdf](https
 
 **Materials for DIY dynamo**
 
-* 6V dynamo at [Praxis](https://www.praxis.nl/tuin-buitenleven/fiets/fietsverlichting/dresco-dynamo-links-zwart-6v-3w/5599378?channable=02490e69640035353939333738d6#specs) €4 
+* New 6V dynamo at [Praxis](https://www.praxis.nl/tuin-buitenleven/fiets/fietsverlichting/dresco-dynamo-links-zwart-6v-3w/5599378?channable=02490e69640035353939333738d6#specs) €4 
 
 <img src="./images/dynamo_praxis.png" alt="image of bicycle dynamo" width="200">
+
+* Second hand via Marktplaats. I got some old ones at a good price. They're all rated at 6V/3W. I tested the ones with an exposed nut on top (8mm and 9 mm) that I could drive with my IKEA battery powered hand drill. I got between 0.7 and 1.5V readings. I assume you need to make a lot more rotations per second to get the 5-6 V we need. Charging my drill now to see if there's a difference with a full battery. You can see video [here](./images/dynamotest_handdrill.mp4)
+
+<img src="./images/dynamo_measurings.jpeg" alt="image of bicycle dynamo" width="600">
+
+Most likely we need to make some kind of system to get more rotations. Either by mounting it on a stationary bike, like they did [here](https://www.lowtechmagazine.com/2022/03/how-to-build-bike-generator.html).
+
+<img src="./images/lowtechmag_stationary.jpg" alt="image of bicycle dynamo" width="400">
+
+*Above: Low Tech Magazine's Household Bike Generator*
+
+Or something similar to this (probably with a bigger wheel): 
+
+<img src="./images/flywheel_belt_dynamo.jpg" alt="image of bicycle dynamo" width="200">
+
 
 **Parts list for use with 6V/12V/24V (up to 26V) dynamos**
 

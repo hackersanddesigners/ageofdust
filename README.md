@@ -132,6 +132,8 @@ NOTE ON CODE: you need to include the Digispark SoftSerial library in the sketch
 <img src="./images/doit_esp32_devkit_dfplayer_bb.png" alt="DFPlayer module" width="800">
  
 Code: [One song play](./codes/doit_esp32_dev_dfplayer/doit_esp32_dev_dfplayer.ino)
+Code: [Play when digital sensor is triggered](./codes/doit_esp32_dev_dfplayer_sensor/doit_esp32_dev_dfplayer_sensor.ino)
+Code: [Play and pause when digital sensor is triggered](./codes/doit_esp32_dev_dfplayer_play_pause/doit_esp32_dev_dfplayer_play_pause)
  
  
  **Notes on filenames**

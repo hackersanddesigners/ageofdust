@@ -476,9 +476,9 @@ Most likely we need to make some kind of system to get more rotations. Either by
 
 *Above: Low Tech Magazine's Household Bike Generator*
 
-Or something similar to this (probably with a bigger wheel): 
+And so we did! Found a stationary training bike and Heerko mounted a dynamo alongside the flywheel. It's a 6V dynamo but with some effort he got up to 25V out of the thing, woo!
 
-<img src="./images/flywheel_belt_dynamo.jpg" alt="image of bicycle dynamo" width="200">
+<img src="./images/cycling.png" alt="image of bicycle dynamo" width="400">
 
 
 **Parts list for use with 6V/12V/24V (up to 26V) dynamos**
@@ -489,11 +489,6 @@ Or something similar to this (probably with a bigger wheel):
 * Capacitor 3 = 22uF tantalum [via Reichelt](https://www.reichelt.nl/nl/nl/tantalkondensator-22-f-35-v-avx-tap226m035cc-p246462.html?&nbc=1)
 * 5V regulator (converts 6V into 5V) [LM2940CT5 via Reichelt](https://www.reichelt.nl/nl/nl/spanningsregelaar-5-0v-1a-to-220-lm-2940-ct5-p39455.html?&nbc=1) But you are on the limit! Actually they recomend voltage input 7V. This regulator can be used also with a 12V dynamo.
 * perfboard lanes [via Reichelt](https://www.reichelt.nl/nl/nl/bandroosterprintplaat-hardpapier-160x100mm-up-720hp-p23958.html?&nbc=1)
-
-
-**@ EMMA: I've tried making a schematic and breadboarded version from the example and your info for the 6V/12V/24V option. I hope the color codes make legible a bit the thinking process. If you want to check the fritz for proper routing, the fritzing sketch is under Files > dynamo_v2_noresistors.fzz. _UPDATE_: I removed the resistors and made a version without bridge rectifier for the solar powered version.**
-
-[OR just get experiment PCB lanes (continuous) at tinytronics €2 a pop](https://www.tinytronics.nl/shop/en/tools-and-mounting/prototyping-supplies/experiment-pcbs/experiment-pcb-9cm*15cm-lanes)
 
   <img src="./images/power_circuit_dynamo_noresistors.jpg" alt="circuit for power supply w dynamo_noresistors">
   

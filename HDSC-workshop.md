@@ -6,14 +6,13 @@
 
 ## Workshop program
 
-10.00 - 11.00 story & worldbuilding
+10.00 - 11.30 story & worldbuilding
 
-11.00 - 13.00 
-imagining communication tools through low-fi making (e.g. paper mache). 
+11.30 - 13.00 imagining communication tools through low-fi making (e.g. paper mache). 
 
-13.00-14.00 lunch break
+13.00 - 14.00 lunch break
 
-14.00-15.30 building and connecting the electronics
+14.00 - 15.30 building and connecting the electronics
 
 15.30 - 17.30 LARPing together
 
@@ -27,6 +26,7 @@ Relevant info and docs here:
 - The three communities and their objectives
 - Dependence on the sun/the body for energy
 - [Something to introduce technical limitations (10 sec sound recording & playback) in a conceptual way?]
+- Documenting
 
 ## 2. Imagining tools
 

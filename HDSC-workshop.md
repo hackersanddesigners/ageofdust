@@ -8,11 +8,13 @@
 
 10.00 - 11.30 story & worldbuilding
 
-11.30 - 13.00 imagining communication tools through low-fi making (e.g. paper mache). 
+11.30 - 12.00 imagining communication tools
+
+12.00 - 13.00 building tools (electronic + shell)
 
 13.00 - 14.00 lunch break
 
-14.00 - 15.30 building and connecting the electronics
+14.00 - 15.30 building tools (electronic + shell)
 
 15.30 - 17.30 LARPing together
 

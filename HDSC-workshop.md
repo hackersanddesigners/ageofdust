@@ -41,6 +41,8 @@ Prompt: gather with the "community" you will be playing (4-7 people per group) a
 * **rituals**: are there any rituals in place around the use of the tool? who gets to use it? for what? How does decisionmaking take place? 
 * **shape, size, texture**: following the points above, what should the tool look like?
 
+There are tool sheets you can use to sketch and describe your tool and how to use it. (manual/protocol)
+
 
 ## 3. Electronics
 

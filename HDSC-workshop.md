@@ -1,8 +1,9 @@
 # Age of Dust - H&D Summer Camp
 
-## Introduction
+**By Juliette & Loes**
 
-[text juliette]
+ <img src="./images/ageofdusthdsc.jpg" width="350"> 
+
 
 ## Workshop program
 
@@ -22,13 +23,7 @@
 
 ## 1. Story & Worldbuilding
 
-Relevant info and docs here: 
-
-- Setting/context
-- The three communities and their objectives
-- Dependence on the sun/the body for energy
-- [Something to introduce technical limitations (10 sec sound recording & playback) in a conceptual way?]
-- Documenting
+See this etherpad pad [https://etherpad.hackersanddesigners.nl/p/ageofdust-hdsc](https://etherpad.hackersanddesigners.nl/p/ageofdust-hdsc)
 
 ## 2. Imagining tools
 
@@ -48,7 +43,7 @@ There are tool sheets you can use to sketch and describe your tool and how to us
 
 Bring your prototype to life! 
 
-### Recording module ISD1820
+### Recording module ISD1820 (3x) - beginner friendly, no coding!
 
 The ISD1820 is a 10 second audio recording and playback module € 3.50 [Via tinytronics](https://www.tinytronics.nl/shop/en/audio/accessories/others/voice-recording-module-with-speaker-isd1820). The image explains the different pins and their uses. 
 
@@ -59,10 +54,18 @@ The ISD1820 is a 10 second audio recording and playback module € 3.50 [Via tin
 
  <img src="./images/ISD1820_all.jpg" alt="ISD1820 module" width="750"> 
 
+### Bare touch board (1x) - a little more advanced, if you want :) 
+
+We didn't receive all the ISD1820 modules we'd ordered, so if we are a bit short on materials, it could be fun for somewhat experienced people to try out working with the Bare Touch Board. This is a Leonardo style microcontroller with capacitive touch sensors and a sound card. If you touch one of the probes you can trigger mp3 tracks on the sound card. No live recording though. You can extend the pads with any conductive material (aluminum foil, copper tape), or turn them into proximity sensors by changing the code. All the other sensor modules work as well. 
+
+We've included the necessary documentation [in the folder > files > touch_board of this repository](./files/touch_board) to set up the tool chain to program this board. If you've read a datasheet and installed a board and some libraries in the Arduino IDE before you will be able to figure this out. We're around to assist.
+
+ <img src="./images/touchboard.png" alt="ISD1820 module" width="750"> 
+
 
 ### Sound outputs
 
-You can connect different speakers to the board. Each of these can work on a sunny day with the solar panels provided. 
+You can connect different speakers to the board. More on how to power the circuits at the bottom of this page. 
 
  <img src="./images/piezo.png" alt="piezo transducer" width="150"> 
 
@@ -128,4 +131,4 @@ Place the braid on top of the joint you want to desolder and place the soldering
 
 ## 4. How to play
 
-[instructions Juliette]
+See pad [https://etherpad.hackersanddesigners.nl/p/ageofdust-hdsc](https://etherpad.hackersanddesigners.nl/p/ageofdust-hdsc)

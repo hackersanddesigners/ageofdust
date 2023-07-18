@@ -1,0 +1,123 @@
+;
+; touchboard-composite.inf 
+;
+; USB Composite Device Driver for the Bare Conductive Touch Board
+;
+; Written by Stefan Dzisiewski-Smith, using examples from all over the web!
+;
+; This work is licensed under a MIT license https://opensource.org/licenses/MIT
+; 
+; Copyright (c) 2016, Bare Conductive
+; 
+; Permission is hereby granted, free of charge, to any person obtaining a copy
+; of this software and associated documentation files (the "Software"), to deal
+; in the Software without restriction, including without limitation the rights
+; to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+; copies of the Software, and to permit persons to whom the Software is
+; furnished to do so, subject to the following conditions:
+; 
+; The above copyright notice and this permission notice shall be included in all
+; copies or substantial portions of the Software.
+; 
+; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+; IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+; FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+; AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+; SOFTWARE.
+;
+
+[Strings]
+MFG_NAME="Bare Conductive Ltd."
+TB_DESC="Touch Board Composite Device"
+
+[Version]
+Signature="$Windows NT$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+Provider=%MFG_NAME%
+CatalogFile=touchboard-composite.cat
+DriverVer=11/17/2016,3.1.0.0 ; MUST use mm/dd/yyyy format
+
+[ControlFlags]
+BasicDriverOk=*
+ExcludeFromSelect=*
+
+[SourceDisksNames]
+3426=windows cd
+
+[SourceDisksFiles]
+;usbhub.sys 		= 3426
+usbccgp.sys 		= 3426
+
+[DestinationDirs]
+DefaultDestDir=11               ; LDID_SYS
+;
+; For Windows NT, all drivers go into %windir%\system32\drivers.  Since
+; there isn't a DIRID (LDID) that represents this path on both NT and Win95,
+; we specify the relative path off of %windir%.
+;
+Hub.CopyFiles.NT               = 10, system32\drivers
+CommonClassParent.CopyFiles.NT = 10, system32\drivers
+
+; =================== Table of content =========================
+
+
+[Manufacturer]
+%MFG_NAME%=BareConductive.Section,NTx86, NTamd64, NTia64
+
+; =================== Generic ==================================
+
+[BareConductive.Section.NTamd64]
+%TB_DESC%=Composite.Dev,USB\VID_2A6E&PID_8003
+
+[BareConductive.Section.NTx86]
+%TB_DESC%=Composite.Dev,USB\VID_2A6E&PID_8003
+
+[BareConductive.Section.NTia64]
+%TB_DESC%=Composite.Dev,USB\VID_2A6E&PID_8003
+
+;[SignatureAttributes.DRM]
+;DRMLevel=1300
+
+; --------------------------------------------------------------
+; For Windows NT...
+
+[Composite.Dev.NT]
+CopyFiles=CommonClassParent.CopyFiles.NT
+DelReg=Composite.DelReg.NT
+AddReg=Composite.AddReg.NT
+
+[Composite.DelReg.NT]
+HKR,,EnumPropPages32
+
+[Composite.Dev.NT.Services]
+AddService = usbccgp, 0x00000002, CommonClassParent.AddService
+
+[Composite.AddReg.NT]
+HKLM,System\CurrentControlSet\Services\usbccgp,BootFlags,0x00010003,4
+
+[CommonClassParent.AddService]
+DisplayName    = %GenericParent.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\usbccgp.sys
+LoadOrderGroup = Base
+
+; =================== Global ==================================
+
+[USBMON.DelFiles.NT]
+mondrv.sys,,,1
+mondll.dll,,,1
+
+[USBINF.DelFiles.NT]
+propext.inf,,,1
+tmusb.inf,,,1
+ehidmous.inf,,,1
+ehidkbd.inf,,,1
+ehidjoy.inf,,,1
+
+;[CommonClassParent.CopyFiles.NT]
+;usbccgp.sys,,,0x100

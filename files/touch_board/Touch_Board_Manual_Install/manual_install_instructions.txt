@@ -1,0 +1,82 @@
+Manual Touch Board Arduino Plugin Install Instructions
+------------------------------------------------------
+
+Firstly, if you have not already downloaded the latest version of Arduino from
+http://www.arduino.cc/ please do so, and run the program at least once before
+closing it.
+
+Copy the "Touch Board Examples" folder inside this .zip to your Arduino
+Sketchbook folder. You can locate this by opening Arduino, and selecting File ->
+Preferences (or Arduino -> Preferences on Mac). The folder you are looking for
+is shown under "Sketchbook location:".
+
+Copy the three folders inside the "libraries" folder inside this .zip to a
+folder named "libraries" within your Arduino Sketchbook folder. If this does not
+already exist, create it.
+
+Copy the "bare_conductive_arduino" folder inside the "hardware" folder inside
+this .zip to a folder named "hardware" within your Arduino Sketchbook folder. If
+this does not already exist, create it.
+
+Your final folder structure should look like this:
+
+  Arduino Sketchbook folder
+  │
+  ├──hardware
+  │  └──bare_conductive_arduino
+  │
+  ├──libraries
+  │  ├──MPR121
+  │  ├──SdFat
+  │  └──SFEMP3Shield
+  │
+  └──Touch Board Examples
+     ├──flappy_bird
+     ├──HID_Keyboard
+     ├──hole_in_the_wall
+     ├──Light_Switch
+     ├──Midi_interface
+     ├──Midi_interface_generic
+     ├──Midi_Piano
+     ├──midi_theremin
+     ├──multi_touch_board_midi
+     │  ├──images
+     │  ├──primary_midi_board
+     │  └──secondary_midi_board
+     ├──multi_touch_board_mp3
+     │  ├──audio_files
+     │  ├──images
+     │  ├──primary_mp3_board
+     │  └──secondary_mp3_board
+     ├──Prox_LED
+     ├──prox_volume
+     ├──Proximity_MP3
+     ├──Random_Touch_MP3
+     ├──Touch_MP3
+     └──touch_mp3_with_leds
+
+If you are running Windows, make sure that your Touch Board is not connected to
+your computer, and then open the "driver" folder inside this .zip and run one of
+"dpinst_x86.exe", "dpinst_AMD64.exe" or "dpinst_ia64.exe" depending on the
+architecture of your computer. If none of that makes sense to you, try each in
+turn until one works. Windows will not allow you to run an incorrect program.
+
+Click Yes or Accept to all the questions you get asked - this will install our
+signed driver. Restart your computer. When you next plug in the Touch Board,
+Windows will automatically install the correct drivers and the board will appear
+as a COM port.
+
+The first time you try to upload code to the board via the Arduino IDE (or when
+you first press the reset button with the board connected to your computer) you
+may get a message that Windows failed to successfully install a driver. You will
+probably also find that your first upload fails.
+
+Don't worry about this - give your computer 45 seconds to catch up with itself
+and try again. This will only happen once.
+
+Note that you only need to bother with the driver if you are running Windows -
+Linux and Mac OS do not require drivers to work with the Touch Board.
+
+Once you have completed the above process, the next time you run Arduino you
+will be able to select the Touch Board in the Tools -> Board menu and you will
+see the example code in the File -> Sketchbook menu. Have fun!

@@ -99,6 +99,10 @@ The electronics setups listed here require 3-3V - 5V power supply. We've provide
  <img src="./images/solar_3x_parallel.png" alt="3 cells connected in parallel" width="750"> 
 
 
+### pinout isd1820
+
+ <img src="./images/isd_chip_pins.png"  width="250"> 
+
 
 ### How to (de)solder
 

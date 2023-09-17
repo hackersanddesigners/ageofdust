@@ -39,7 +39,7 @@ Prompt: gather with the "community" you will be playing (4-7 people per group) a
 There are tool sheets you can use to sketch and describe your tool and how to use it. (manual/protocol)
 
 
-## 3. Electronics
+## 3. Electronicsz
 
 Bring your prototype to life! 
 
